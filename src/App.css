@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'gotham-bold';
+  font-style: normal;
+  font-weight: bold;
+  src: url('/fonts/gotham-bold-webfont.woff2'); 
+}
+@font-face {
+  font-family: 'gotham-light';
+  font-style: normal;
+  font-weight: light;
+  src: url('/fonts/gotham-light-webfont.woff2'); 
+}
+@font-face {
+  font-family: 'gotham-bold';
+  font-style: normal;
+  font-weight: bold;
+  src: url('/fonts/gotham-bold-webfont.woff2'); 
+}
+
+body, p, small, h1, h2, h3, h4, h5 {
+  font-family: 'gotham';
+}
+
+h1 {
+  font-family: 'gotham-light', serif; 
+}
+
+.header-1 {
+  font-size: 41px;
+  font-weight: 400;
+  padding: 25px auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.video-container {
+  height: 35vw;
+  overflow: hidden;
+}
+
+.video-container .ui.embed {
+  margin-top: -10vw;
+}
