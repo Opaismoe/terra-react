@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+
+import { Container, Header } from "semantic-ui-react";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <Container text textAlign='center'>
+        <Header as="h2">Projecten</Header>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. A sequi
+          aspernatur soluta hic facere corporis esse sit doloremque numquam
+          fugit dolorum odio cumque, perspiciatis omnis vero perferendis.
+          Architecto, maxime fugiat.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </Container>
     </div>
   );
 }
