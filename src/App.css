@@ -1,3 +1,4 @@
+@import './typography.css';
 @font-face {
   font-family: 'gotham-bold';
   font-style: normal;
@@ -17,12 +18,17 @@
   src: url('/fonts/gotham-bold-webfont.woff2'); 
 }
 
-body, p, small, h1, h2, h3, h4, h5 {
+body, a, p, small, h1, h2, h3, h4, h5 {
   font-family: 'gotham';
 }
 
-h1 {
+h1, h2 {
   font-family: 'gotham-light', serif; 
+}
+
+.menu a{
+  font-family: Calibri, "Lucida Sans Unicode", sans-serif;
+  
 }
 
 .header-1 {
@@ -37,7 +43,7 @@ h1 {
 }
 
 .video-container {
-  height: 35vw;
+  height: 45vw;
   overflow: hidden;
 }
 
