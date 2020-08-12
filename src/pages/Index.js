@@ -2,26 +2,36 @@ import React from "react";
 import { Grid, Header } from "semantic-ui-react";
 
 import VideoVimeo from "../components/VideoVimeo";
+import MainCarousel from "../components/MainCarousel";
 
 const Index = () => {
   return (
     <>
       <VideoVimeo/>
 
-      <Grid padded textAlign="center">
+      <Grid textAlign="center">
         <Grid.Row style={style.row}>
-          <Header>
-            <h2 className="bigtitle">Wij zijn een digital design agency.</h2>
-          </Header>
+          <Grid.Column width="7">
+            <Header>
+              <h2 className="bigtitle">Wij zijn een digital design agency.</h2>
+            </Header>
+          </Grid.Column>
         </Grid.Row>
       </Grid>
-      <Grid padded textAlign="center">
+
+      <MainCarousel/>
+
+      <Grid textAlign="center">
         <Grid.Row style={style.row}>
-          <Header>
-            <h2 className="header__2">Projecten</h2>
-          </Header>
+          <Grid.Column width="7">
+            <Header>
+              <h2 className="bigtitle">Wij geloven dat krachtige ideeën en intelligent design merken en organisaties versterken.</h2>
+            </Header>
+          </Grid.Column>
         </Grid.Row>
       </Grid>
+
+
     </>
   );
 };
@@ -30,7 +40,7 @@ export default Index;
 
 const style = {
   row: {
-    marginTop: `2.5em`,
+    margin: `5em auto`,
     justifyContent: `center`,
   },
 };

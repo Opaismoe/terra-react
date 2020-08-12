@@ -12,7 +12,7 @@ const NavbarMenu = ({ isVisible, setIsVisible }) => {
           </Link>
       </Menu.Item>
       <Menu.Menu position="right">
-      <Menu.Item as="a" style={style.menuItem}>
+      <Menu.Item style={style.menuItem}>
         <Link to="/projecten">
           Projecten
         </Link>

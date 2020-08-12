@@ -1,0 +1,73 @@
+.legend {
+  color: white !important;
+  background: var(--primary) !important;
+  opacity: 1 !important;
+  font-family: gotham-bold;
+  font-weight: normal;
+  padding: 25px 30px !important;
+  border-radius: 4px !important;
+  margin-left: -21% !important;
+  width: 40% !important;
+  font-size: 28px !important;
+  text-transform: none;
+}
+
+.control-dots .dot {
+  background: none !important;
+  opacity: .7 !important;
+  border: 1px solid white; 
+}
+
+.control-dots .dot.selected {
+  background: white !important;
+}
+
+.control-arrow {
+  opacity: 1 !important; 
+  background: white !important;
+  height: 80px !important;
+  width: 80px !important;
+  margin: auto !important;
+  border-radius: 5px;
+  transition: .2s ease-out background !important; 
+}
+
+.control-arrow:hover {
+  background: var(--primary) !important;
+}
+
+.control-arrow:hover .control-arrow:hover::before {
+  color: red !important;
+}
+
+.control-next.control-arrow  {
+  margin-right: 2em !important;
+}
+
+.control-prev.control-arrow {
+  margin-left: 2em !important;
+}
+
+.carousel .control-next.control-arrow::before {
+  border-left: 8px solid var(--primary);
+}
+
+.carousel .control-prev.control-arrow::before {
+  border-right: 8px solid var(--primary);
+}
+
+.carousel .control-next:hover.control-arrow::before {
+  border-left: 8px solid white!important;
+}
+
+.carousel .control-prev:hover.control-arrow::before {
+  border-right: 8px solid white!important;
+}
+
+.carousel-status {
+  display: none !important;
+}
+/* 
+.thumbs-wrapper {
+  display: none !important;
+} */

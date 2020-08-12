@@ -24,9 +24,7 @@ const SidebarMenu = ({ isVisible, setIsVisible }) => {
         <Icon name="close" />
       </Menu.Item>
       <Menu.Item as="a" style={style.menuItem}>
-        <Link to="projecten">
-          Projecten
-        </Link>
+        Projecten
       </Menu.Item>
       <Menu.Item as="a" style={style.menuItem}>
         Nieuws
