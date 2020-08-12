@@ -16,17 +16,17 @@
   src: url('/fonts/gotham-light-webfont.woff2'); 
 }
 @font-face {
-  font-family: 'gotham-bold';
+  font-family: 'gotham-book';
   font-style: normal;
   font-weight: bold;
-  src: url('/fonts/gotham-bold-webfont.woff2'); 
+  src: url('/fonts/gotham-book-webfont.woff2'); 
 }
 
-body, a, p, small, h1, h2, h3, h4, h5 {
+body, a, p, small, h1, h2, h3, h4, h5, span {
   font-family: 'gotham';
 }
 
-h1, h2 {
+h1, h2, h3, h4, h5 {
   font-family: 'gotham-light', serif; 
 }
 

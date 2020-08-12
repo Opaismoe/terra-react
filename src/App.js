@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { Dimmer, Grid, Header, Progress, Segment } from "semantic-ui-react";
+import { Progress } from "semantic-ui-react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
 import "./App.css";
+
+import Index from "./pages/Index";
+import Projecten from "./pages/Projecten";
+
 import NavbarMenu from "./components/NavbarMenu";
-import ProjectCard from "./components/ProjectCard";
 import SidebarMenu from "./components/SidebarMenu";
-import VideoVimeo from "./components/VideoVimeo";
+import StickyFooter from "./components/StickyFooter";
 
 const projectUrl = `https://terralemon-dev.nl/json/projects`;
 const projectCache = {};
@@ -35,6 +40,7 @@ function App() {
 
   return (
     <div className="App">
+      <BrowserRouter>
       {isLoading ? (
         <Progress
           style={style.progress}
@@ -45,57 +51,23 @@ function App() {
           autoSuccess
         />
       ) : null}
-      <SidebarMenu isVisible={isVisible} setIsVisible={setIsVisible} />
-      <NavbarMenu isVisible={isVisible} setIsVisible={setIsVisible} />
-
-      <VideoVimeo isLoading />
-
-      <Grid padded textAlign="center">
-        <Grid.Row style={style.row}>
-          <Header>
-            <h2 className="title">Wij zijn een digital design agency.</h2>
-          </Header>
-        </Grid.Row>
-      </Grid>
-      <Grid padded textAlign="center">
-        <Grid.Row style={style.row}>
-          <Header>
-            <h2 className="header__2">Projecten</h2>
-          </Header>
-        </Grid.Row>
-      </Grid>
-      {/* TODO: Filter compopnent */}
-      <Dimmer.Dimmable
-        as={Segment}
-        blurring
-        dimmed={isLoading}
-        loading={isLoading}
-      >
-        <Grid container centered>
-          <Grid.Row style={style.row}>
-            {projects.map((project, index) => {
-              if (index <= 3) {
-                return (
-                  <ProjectCard key={project.id} project={project} size={8} />
-                );
-              } else {
-                return (
-                  <ProjectCard key={project.id} project={project} size={4} />
-                );
-              }
-            })}
-          </Grid.Row>
-        </Grid>
-      </Dimmer.Dimmable>
+        <SidebarMenu isVisible={isVisible} setIsVisible={setIsVisible} />
+        <NavbarMenu isVisible={isVisible} setIsVisible={setIsVisible} />
+        <Switch>
+          <Route exact path="/" >
+            <Index isVisible={isVisible} isLoading={isLoading} setIsVisible={setIsVisible} projects={projects}/>
+          </Route>
+          <Route path="/projecten">
+            <Projecten projects={projects} isLoading={isLoading} />
+          </Route>
+        </Switch>
+        <StickyFooter/>
+      </BrowserRouter>
     </div>
   );
 }
 
 const style = {
-  row: {
-    marginTop: `2.5em`,
-    justifyContent: `center`,
-  },
   progress: {
     position: `absolute`,
     top: 0,
@@ -103,5 +75,6 @@ const style = {
     width: `100%`,
   },
 };
+
 
 export default App;

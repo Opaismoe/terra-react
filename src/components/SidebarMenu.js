@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 import { Icon, Menu, Sidebar } from "semantic-ui-react";
 
 const SidebarMenu = ({ isVisible, setIsVisible }) => {
@@ -23,7 +24,9 @@ const SidebarMenu = ({ isVisible, setIsVisible }) => {
         <Icon name="close" />
       </Menu.Item>
       <Menu.Item as="a" style={style.menuItem}>
-        Projecten
+        <Link to="projecten">
+          Projecten
+        </Link>
       </Menu.Item>
       <Menu.Item as="a" style={style.menuItem}>
         Nieuws

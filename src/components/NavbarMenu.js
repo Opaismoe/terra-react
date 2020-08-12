@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 import { Menu, Image, Button, Icon } from "semantic-ui-react";
 import brand from "../terralemon.svg";
 
@@ -6,11 +7,15 @@ const NavbarMenu = ({ isVisible, setIsVisible }) => {
   return (
     <Menu style={style.navbar} borderless={true}>
       <Menu.Item name="Home">
-        <Image src={brand} style={style.image} />
+        <Link to="/">
+          <Image src={brand} style={style.image} />
+          </Link>
       </Menu.Item>
       <Menu.Menu position="right">
       <Menu.Item as="a" style={style.menuItem}>
-        Projecten
+        <Link to="/projecten">
+          Projecten
+        </Link>
       </Menu.Item>
       <Menu.Item as="a" style={style.menuItem}>
         Nieuws
