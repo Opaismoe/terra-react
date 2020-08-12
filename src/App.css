@@ -1,3 +1,7 @@
+:root {
+  --primary: #00b1dd;
+}
+
 @import './typography.css';
 @font-face {
   font-family: 'gotham-bold';
@@ -31,7 +35,7 @@ h1, h2 {
   
 }
 
-.header-1 {
+.bigtitle {
   font-size: 41px;
   font-weight: 400;
   padding: 25px auto;
@@ -42,11 +46,11 @@ h1, h2 {
   padding: 0;
 }
 
-.video-container {
-  height: 45vw;
+.video__container {
+  height: 35vw;
   overflow: hidden;
 }
 
-.video-container .ui.embed {
+.video__container .ui.embed {
   margin-top: -10vw;
 }

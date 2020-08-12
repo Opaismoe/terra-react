@@ -1,0 +1,26 @@
+
+.project__card { 
+  margin-bottom: 2.5em !important;
+  border: none;
+  overflow: hidden;
+}
+
+.project__card:hover .project__card__content { 
+  bottom: 0;
+}
+
+.project__card__title {
+  color: white !important;
+}
+
+.project__card__content {
+  position: absolute;
+  bottom: -200px;
+  transition: 125ms bottom ease-out;
+  background: var(--primary) !important;
+  width: 100%;
+}
+.project__card__image {
+  height: 250px;
+  overflow: hidden;
+}

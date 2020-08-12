@@ -1,14 +1,15 @@
 import React from "react";
-import { Sidebar, Menu, Icon } from "semantic-ui-react";
+import { Icon, Menu, Sidebar } from "semantic-ui-react";
 
 const SidebarMenu = ({ isVisible, setIsVisible }) => {
   return (
     <Sidebar
       as={Menu}
-      animation="push"
+      animation="scale down"
       onHide={() => setIsVisible(false)}
       visible={isVisible}
       size="massive"
+      direction="top"
       vertical
       fluid
       borderless={true}

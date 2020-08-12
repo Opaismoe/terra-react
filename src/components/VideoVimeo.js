@@ -1,6 +1,6 @@
 import React from 'react'
-
 import { Embed } from 'semantic-ui-react'
+
 
 const VideoVimeo = ({ isLoading }) => {
   return (
