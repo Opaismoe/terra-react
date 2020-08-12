@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
-import { Container, Grid, Header, Embed } from "semantic-ui-react";
+import { Container, Grid, Header } from "semantic-ui-react";
 
 import NavbarMenu from "./components/NavbarMenu";
 import SidebarMenu from "./components/SidebarMenu";
 import ProjectCard from "./components/ProjectCard"
+import VideoVimeo from "./components/VideoVimeo"
+
 
 const projectUrl = `https://terralemon-dev.nl/json/projects`;
 const projectCache = {};
@@ -39,12 +41,7 @@ function App() {
       <SidebarMenu isVisible={isVisible} setIsVisible={setIsVisible} />
       <NavbarMenu isVisible={isVisible} setIsVisible={setIsVisible} />
 
-      <div className="video-container">
-        <Embed
-          active={true}
-          url="https://player.vimeo.com/video/158629788?autoplay=1&loop=1&title=0&byline=0&portrait=0&autopause=0&background=1&quality=auto"
-        />
-      </div>
+      <VideoVimeo isL/>
 
       <Grid padded textAlign="center">
         <Grid.Row style={style.row}>
