@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Grid, Image } from "semantic-ui-react";
 import "./ProjectCard.css";
 
-const ProjectCard = ({ project, size }) => {
+const ProjectCard = ({ project, sm, md, lg }) => {
   // const unescapedText = (data) => {
   //   // const summary = document.querySelector('.summary')
   //   let parser = new DOMParser();
@@ -19,7 +19,7 @@ const ProjectCard = ({ project, size }) => {
   // };
 
   return (
-    <Grid.Column largeScreen={size}>
+    <Grid.Column mobile={sm} tablet={md} computer={lg} >
       <Card fluid raised className="project__card">
         <Image
           src={project.image}

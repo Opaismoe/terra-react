@@ -12,11 +12,15 @@ const Projecten = ({ projects, isLoading }) => {
             {projects.map((project, index) => {
               if (index <= 3) {
                 return (
-                  <ProjectCard key={project.id} project={project} size={8} />
+                  <ProjectCard key={project.id} project={project} sm={12} md={8} lg={8}/>
+                );
+              } else if (index === 4) {
+                return (
+                  <ProjectCard key={project.id} project={project} sm={12}  md={8} lg={12}/>
                 );
               } else {
                 return (
-                  <ProjectCard key={project.id} project={project} size={4} />
+                  <ProjectCard key={project.id} project={project} sm={12}  md={8} lg={4}/>
                 );
               }
             })}

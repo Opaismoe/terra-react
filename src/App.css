@@ -47,10 +47,10 @@ h1, h2, h3, h4, h5 {
 }
 
 .video__container {
-  height: 35vw;
+  height: 45vw;
   overflow: hidden;
 }
 
 .video__container .ui.embed {
-  margin-top: -10vw;
+  margin-top: -7vw;
 }
