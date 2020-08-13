@@ -6,6 +6,7 @@ import "./App.css";
 
 import Index from "./pages/Index";
 import Projecten from "./pages/Projecten";
+import Project from "./pages/Project";
 
 import NavbarMenu from "./components/NavbarMenu";
 import SidebarMenu from "./components/SidebarMenu";
@@ -41,6 +42,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+
       {isLoading ? (
         <Progress
           style={style.progress}
@@ -53,6 +55,7 @@ function App() {
       ) : null}
         <SidebarMenu isVisible={isVisible} setIsVisible={setIsVisible} />
         <NavbarMenu isVisible={isVisible} setIsVisible={setIsVisible} />
+
         <Switch>
           <Route exact path="/" >
             <Index isVisible={isVisible} isLoading={isLoading} setIsVisible={setIsVisible} projects={projects}/>
@@ -60,8 +63,11 @@ function App() {
           <Route path="/projecten">
             <Projecten projects={projects} isLoading={isLoading} />
           </Route>
+          <Route path="/project/:url_title" children={<Project projects={projects} isLoading={isLoading} setProjects={setProjects} />} />
         </Switch>
+        
         <StickyFooter/>
+        
       </BrowserRouter>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Grid, Image } from "semantic-ui-react";
+import { Link } from "react-router-dom"
 import "./ProjectCard.css";
 
 const ProjectCard = ({ project, sm, md, lg }) => {
@@ -17,7 +18,9 @@ const ProjectCard = ({ project, sm, md, lg }) => {
             <h3>{project.title}</h3>
           </Card.Header>
           <Card.Meta>{project.date}</Card.Meta>
-          <Card.Description></Card.Description>
+          <Card.Description>
+            <Link to={`/project/${project.url_title}`}>Lees meer hier: { project.url_title }</Link>
+          </Card.Description>
         </Card.Content>
       </Card>
     </Grid.Column>
