@@ -2,6 +2,8 @@
   --primary: #00b1dd;
 }
 
+.primary { background: var(--primary) !important; }
+
 @import './typography.css';
 @font-face {
   font-family: 'gotham-bold';

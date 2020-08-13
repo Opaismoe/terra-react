@@ -3,7 +3,7 @@ import { Button, Icon } from 'semantic-ui-react'
 
 const AnimatedButton = ({title, icon}) => (
   <div>
-    <Button animated>
+    <Button animated primary floated="left">
       <Button.Content visible>{title}</Button.Content>
       <Button.Content hidden>
         <Icon name={icon} />

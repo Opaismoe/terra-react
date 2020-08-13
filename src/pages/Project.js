@@ -25,11 +25,11 @@ const Project = ({ projects }) => {
   return (
     <>
       <Transition visible={!isLoading} animation='fade' duration={1450}>
-        {/* <Grid container>
-          <AnimatedButton title="back" icon="arrow prev"/>
-        </Grid> */}
         <Grid container centered>
           <Grid.Row style={style.row}>
+            <Link to="/projecten" style={{ marginLeft: 0, position: `absolute`, left: 0 }}>
+              <AnimatedButton title="back" icon="long arrow alternate left"/>
+            </Link>
             {oneProject.map((project) => (
               <div key={project.id}>
                 <Image src={project.image} fluid/>
