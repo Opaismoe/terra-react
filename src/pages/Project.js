@@ -1,35 +1,31 @@
 import React, { useState, useEffect } from "react";
 import { Grid, Transition, Image } from "semantic-ui-react";
-import { Link, useParams } from "react-router-dom"
+import { Link, useParams, useHistory } from "react-router-dom"
 
 import AnimatedButton from "../components/AnimatedButton"
 
-const Project = ({ projects }) => {
-  let { url_title } = useParams()
+const Project = ({ projects, isLoading }) => {
+  const { url_title } = useParams()
+  const history = useHistory()
   const [oneProject, setOneProject] = useState([])
-  const [isLoading, setIsLoading] = useState(false)
 
 
   useEffect(() => {
   const getOneProject = async () => {
-    setIsLoading(true)
     let oneProject = projects.filter(project => project.url_title === url_title).map(filteredProject => {
       return filteredProject
     })
     setOneProject(oneProject)
-    setIsLoading(false)
   }
     getOneProject()
-  }, [])
+  }, [projects, url_title])
   
   return (
     <>
       <Transition visible={!isLoading} animation='fade' duration={1450}>
         <Grid container centered>
           <Grid.Row style={style.row}>
-            <Link to="/projecten" style={{ marginLeft: 0, position: `absolute`, left: 0 }}>
-              <AnimatedButton title="back" icon="long arrow alternate left"/>
-            </Link>
+            <AnimatedButton title="back" icon="long arrow alternate left" clickHandler={() => history.goBack()} style={{ marginLeft: 0, position: `absolute`, left: 0 }}/>
             {oneProject.map((project) => (
               <div key={project.id}>
                 <Image src={project.image} fluid/>
@@ -39,6 +35,9 @@ const Project = ({ projects }) => {
                 <p className ="lead">
                   {project.summary}
                 </p>
+                <h2>
+                  Case: {project.case.title}
+                </h2>
               </div>
             ))}
           </Grid.Row>

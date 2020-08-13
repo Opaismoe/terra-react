@@ -9,6 +9,10 @@
   bottom: 0;
 }
 
+.project__card:hover .project__card__image { 
+  transform: scale(1.1);
+}
+
 .project__card__title {
   color: white !important;
 }
@@ -22,6 +26,6 @@
   width: 100%;
 }
 .project__card__image {
-  /* height: 250px; */
+  transition: .125s ease-out transform;
   overflow: hidden;
 }

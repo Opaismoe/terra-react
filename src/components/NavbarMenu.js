@@ -12,15 +12,13 @@ const NavbarMenu = ({ isVisible, setIsVisible }) => {
           </Link>
       </Menu.Item>
       <Menu.Menu position="right">
-      <Menu.Item style={style.menuItem}>
-        <Link to="/projecten">
-          Projecten
-        </Link>
+      <Menu.Item as={Link} to="/projecten" style={style.menuItem}>
+        Projecten
       </Menu.Item>
-      <Menu.Item as="a" style={style.menuItem}>
+      <Menu.Item as={Link} to="/nieuws" style={style.menuItem}>
         Nieuws
       </Menu.Item>
-      <Menu.Item as="a" style={style.menuItem}>
+      <Menu.Item as={Link} to="/over" style={style.menuItem}>
         Over Terralemon
       </Menu.Item>
         <Button style={style.menuButton} icon onClick={() => setIsVisible(!isVisible)}>

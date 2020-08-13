@@ -37,7 +37,7 @@ function App() {
       }
     };
     fetchProjects();
-  }, []);
+  }, [projects]);
 
   return (
     <div className="App">
@@ -63,7 +63,9 @@ function App() {
           <Route path="/projecten">
             <Projecten projects={projects} isLoading={isLoading} />
           </Route>
-          <Route path="/project/:url_title" children={<Project projects={projects} isLoading={isLoading} setProjects={setProjects} />} />
+          <Route path="/project/:url_title" >
+            <Project projects={projects} isLoading={isLoading} setProjects={setProjects} />
+          </Route>
         </Switch>
         
         <StickyFooter/>
