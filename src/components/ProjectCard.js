@@ -3,21 +3,6 @@ import { Card, Grid, Image } from "semantic-ui-react";
 import "./ProjectCard.css";
 
 const ProjectCard = ({ project, sm, md, lg }) => {
-  // const unescapedText = (data) => {
-  //   // const summary = document.querySelector('.summary')
-  //   let parser = new DOMParser();
-  //   let doc = parser.parseFromString(data, "text/html");
-  //   doc.childNodes[0].childNodes.forEach((elem) => {
-  //     elem.childNodes.forEach((child) => {
-  //       let p = child.data.slice(0, 3);
-  //       if (p === "<p>") {
-  //         console.log(child.data);
-  //         return child.data;
-  //       }
-  //     });
-  //   });
-  // };
-
   return (
     <Grid.Column mobile={sm} tablet={md} computer={lg} >
       <Card fluid raised className="project__card">
@@ -32,7 +17,7 @@ const ProjectCard = ({ project, sm, md, lg }) => {
             <h3>{project.title}</h3>
           </Card.Header>
           <Card.Meta>{project.date}</Card.Meta>
-          {/* <Card.Description>{project.summary}</Card.Description> */}
+          <Card.Description></Card.Description>
         </Card.Content>
       </Card>
     </Grid.Column>
