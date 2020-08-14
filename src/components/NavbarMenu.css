@@ -1,0 +1,5 @@
+@media screen and (max-width:950px){
+  .right.menu .item {
+    display: none !important;
+  }
+}
