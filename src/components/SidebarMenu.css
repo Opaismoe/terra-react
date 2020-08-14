@@ -1,0 +1,10 @@
+.right.menu > .icon.button {
+  display: none !important;
+}
+
+@media screen and (max-width:950px){
+  .right.menu > .icon.button {
+    display: block !important;
+  }
+}
+

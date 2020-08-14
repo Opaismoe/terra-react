@@ -1,5 +1,24 @@
+.right.menu .item::before {
+  transition: .125s ease-out all;
+  opacity: 0;
+}
+
+.right.menu .item.active, .right.menu .item:hover {
+  background: none !important;
+}
+
+.right.menu .item.active::before,
+.right.menu .item:hover::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  opacity: 1;
+  border-bottom: 3px solid var(--primary);
+}
+
 @media screen and (max-width:950px){
   .right.menu .item {
     display: none !important;
   }
 }
+
