@@ -22,6 +22,7 @@ function App() {
   const [isVisible, setIsVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [projects, setProjects] = useState([]);
+  const [staticContent, setStaticContent] = useState([]);
 
   useEffect(() => {
     const fetchProjects = async () => {

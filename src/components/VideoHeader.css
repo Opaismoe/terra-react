@@ -1,0 +1,19 @@
+.video__hero__container {
+  min-width: 100%;
+  min-height: 700px;
+  position: relative;
+  overflow: hidden;
+}
+.video__hero__container__overlay {
+  height: 700px;
+  overflow: hidden;
+}
+
+.video__hero__container__overlay::before {
+  position: absolute;
+  content:" ";
+  width: 100%;
+  height: 700px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAAXNSR0IArs4c6QAAABZJREFUCB1jYNh09wwYMzAwMAExdgAAoFMEuRXrhM4AAAAASUVORK5CYII=) repeat;
+  z-index: 1;
+}
