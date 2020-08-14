@@ -1,14 +1,16 @@
 import React from 'react'
 import { Header } from 'semantic-ui-react'
 
-const News = () => {
+const Cases = () => {
   return (
-    <>
+    <div>
       <Header>
-        <h1>Nieuws</h1>      
+        <h1>
+          Cases
+        </h1>      
       </Header>
-    </>
+    </div>
   )
 }
 
-export default News
+export default Cases

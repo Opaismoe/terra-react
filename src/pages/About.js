@@ -1,14 +1,14 @@
 import React from 'react'
 import { Header } from 'semantic-ui-react'
 
-const News = () => {
+const About = () => {
   return (
     <>
       <Header>
-        <h1>Nieuws</h1>      
+        <h1>About</h1>
       </Header>
     </>
   )
 }
 
-export default News
+export default About

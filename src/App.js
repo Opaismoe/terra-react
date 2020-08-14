@@ -11,6 +11,9 @@ import Project from "./pages/Project";
 import NavbarMenu from "./components/NavbarMenu";
 import SidebarMenu from "./components/SidebarMenu";
 import StickyFooter from "./components/StickyFooter";
+import News from "./pages/News";
+import Cases from "./pages/Cases";
+import About from "./pages/About";
 
 const projectUrl = `https://terralemon-dev.nl/json/projects`;
 const projectCache = {};
@@ -65,6 +68,15 @@ function App() {
           </Route>
           <Route path="/project/:url_title" >
             <Project projects={projects} isLoading={isLoading} setProjects={setProjects} />
+          </Route>
+          <Route path="/cases">
+            <Cases/>
+          </Route>
+          <Route path="/nieuws">
+            <News/>
+          </Route>
+          <Route path="/over">
+            <About/>
           </Route>
         </Switch>
         
