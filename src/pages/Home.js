@@ -20,7 +20,7 @@ const Home = ({ isVisible, isLoading, setIsVisible, projects}) => {
 
       <Grid container>
         <Grid.Row style={style.rowLeft}>
-          <Grid.Column width="4">
+          <Grid.Column computer={4} tablet={4} mobile={16}>
             <Header>
               <h3 className="subheading2">Identiteit</h3>
             </Header>
@@ -30,10 +30,10 @@ const Home = ({ isVisible, isLoading, setIsVisible, projects}) => {
               sta je voor? Nu en in de toekomst
             </p>
           </Grid.Column>
-          <Grid.Column width="7">
+          <Grid.Column computer={7} tablet={7} mobile={16}>
             <Rings fill="blue" opacity="1" />
           </Grid.Column>
-          <Grid.Column width="4">
+          <Grid.Column computer={4} tablet={4} mobile={16}>
             <Header>
               <h3 className="subheading2">Interactie</h3>
             </Header>

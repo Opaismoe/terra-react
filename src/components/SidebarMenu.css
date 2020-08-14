@@ -8,3 +8,15 @@
   }
 }
 
+.active.item {
+  background: none !important;
+}
+
+.item.active::before,
+.right.menu .item:hover::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  opacity: 1;
+  border-bottom: 3px solid var(--primary);
+}

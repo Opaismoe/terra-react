@@ -67,7 +67,15 @@
 .carousel-status {
   display: none !important;
 }
-/* 
-.thumbs-wrapper {
-  display: none !important;
-} */
+
+@media screen and (max-width:950px){
+  .legend {
+    display: none !important;
+  }
+  .control-arrow {
+    height: 65px !important;
+    width: 65px !important;
+  }
+}
+
+

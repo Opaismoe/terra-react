@@ -11,6 +11,7 @@ import Project from "./pages/Project";
 import NavbarMenu from "./components/NavbarMenu";
 import SidebarMenu from "./components/SidebarMenu";
 import StickyFooter from "./components/StickyFooter";
+import Footer from "./components/Footer";
 import News from "./pages/News";
 import Cases from "./pages/Cases";
 import About from "./pages/About";
@@ -80,6 +81,7 @@ function App() {
           </Route>
         </Switch>
         
+        <Footer/>
         <StickyFooter/>
         
       </BrowserRouter>

@@ -32,6 +32,11 @@ h1, h2, h3, h4, h5 {
   font-family: 'gotham-light', serif; 
 }
 
+
+body {
+  background: #f0f3f6;
+}
+
 .menu a{
   font-family: Calibri, "Lucida Sans Unicode", sans-serif;
   

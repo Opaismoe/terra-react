@@ -3,9 +3,9 @@ import { Grid, Header } from "semantic-ui-react";
 
 const BigTitle = ({ title }) => {
   return (
-            <Grid textAlign="center">
+      <Grid textAlign="center">
         <Grid.Row style={style.row}>
-          <Grid.Column width="7">
+          <Grid.Column largeScreen="7" mobile="16">
             <Header>
               <h2 className="bigtitle">{title}</h2>
             </Header>
