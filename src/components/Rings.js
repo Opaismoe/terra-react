@@ -2,10 +2,6 @@ import React from "react";
 import "./Rings.css"
 
 const Rings = ({ fill, opacity }) => {
-  const onHover = (e) => {
-    console.log(e)
-  }
-  
   return (
     <svg
       width="100%"

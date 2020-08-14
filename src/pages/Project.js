@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Grid, Transition, Image } from "semantic-ui-react";
-import { Link, useParams, useHistory } from "react-router-dom"
+import { useParams, useHistory } from "react-router-dom"
 
 import AnimatedButton from "../components/AnimatedButton"
 

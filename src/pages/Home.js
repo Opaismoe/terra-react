@@ -7,7 +7,7 @@ import MainCarousel from "../components/MainCarousel";
 import Rings from "../components/Rings";
 import ProjectCard from "../components/ProjectCard"
 
-const Index = ({ isVisible, isLoading, setIsVisible, projects}) => {
+const Home = ({ isVisible, isLoading, setIsVisible, projects}) => {
   return (
     <>
       <VideoVimeo />
@@ -67,6 +67,7 @@ const Index = ({ isVisible, isLoading, setIsVisible, projects}) => {
                   <ProjectCard key={project.id} project={project} sm={12} md={8} lg={4}/>
                 );
               } 
+              return null
             })}
           </Grid.Row>
         </Grid>
@@ -75,7 +76,7 @@ const Index = ({ isVisible, isLoading, setIsVisible, projects}) => {
   );
 };
 
-export default Index;
+export default Home;
 
 const style = {
   row: {

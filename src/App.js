@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import "./App.css";
 
-import Index from "./pages/Index";
+import Home from "./pages/Home";
 import Projecten from "./pages/Projecten";
 import Project from "./pages/Project";
 
@@ -22,13 +22,12 @@ function App() {
   const [isVisible, setIsVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [projects, setProjects] = useState([]);
-  const [staticContent, setStaticContent] = useState([]);
 
   useEffect(() => {
     const fetchProjects = async () => {
       setIsLoading(true);
       if (projectCache[projectUrl]) {
-        console.log(projectCache[projectUrl]);
+        // console.log(projectCache[projectUrl]);
         const data = projectCache[projectUrl];
         setProjects(data);
         setIsLoading(false);
@@ -62,7 +61,7 @@ function App() {
 
         <Switch>
           <Route exact path="/" >
-            <Index isVisible={isVisible} isLoading={isLoading} setIsVisible={setIsVisible} projects={projects}/>
+            <Home isLoading={isLoading} projects={projects}/>
           </Route>
           <Route path="/projecten">
             <Projecten projects={projects} isLoading={isLoading} />

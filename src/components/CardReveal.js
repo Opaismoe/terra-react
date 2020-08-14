@@ -17,7 +17,7 @@ const CardReveal = ({ title, listItems, paragraph }) => (
           </List>
         </Card.Content>
       </Reveal.Content>
-      <Reveal.Content as={Card} hidden style={style.card, { background: `var(--primary)`, color: `white`}}>
+      <Reveal.Content as={Card} hidden style={{ background: `var(--primary)`, color: `white`}}>
         <Card.Content>
           <Card.Header>
             Strategie <Icon name="arrow down" />
