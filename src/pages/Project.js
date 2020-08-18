@@ -17,6 +17,7 @@ const Project = ({ projects, isLoading }) => {
     let oneProject = projects.filter(project => project.url_title === url_title).map(filteredProject => {
       return filteredProject
     })
+    console.log(oneProject);
     setOneProject(oneProject)
   }
     getOneProject()
@@ -24,17 +25,22 @@ const Project = ({ projects, isLoading }) => {
   
   return (
     <>
+        <AnimatedButton title="back" icon="long arrow alternate left" clickHandler={() => history.goBack()} style={{ marginLeft: 0, position: `absolute`, left: 0 }}/>
         <Grid container centered>
           <Grid.Row style={style.row}>
-            <AnimatedButton title="back" icon="long arrow alternate left" clickHandler={() => history.goBack()} style={{ marginLeft: 0, position: `absolute`, left: 0 }}/>
             {oneProject.map((project) => (
               <div key={project.id}>
-                <h1 className="bigtitle" style={{ marginBottom: 0 }}>
+                <h1 className="bigtitle lead" style={{ marginBottom: 0 }}>
                   {project.title}
                 </h1>
                 <p className ="lead">
                   {project.summary}
                 </p>
+                <small>
+                  {project.categories && project.categories.map((category, index) => (
+                    index !== -1 ? `${category} ,` : null
+                  ))}
+                </small>
               </div>
             ))}
           </Grid.Row>
@@ -47,6 +53,23 @@ const Project = ({ projects, isLoading }) => {
           ))}
           </Grid.Row>
         </Container>
+
+
+        <Grid container centered>
+          <Grid.Row style={style.row}>
+            {oneProject.map((project) => (
+              project.fluid_content[0].content.map((content => {
+                content
+              }
+            ))}
+          </Grid.Row>
+        </Grid>
+
+        <Grid container centered>
+          <Grid.Row style={style.row}>
+
+          </Grid.Row>
+        </Grid>
 
         <Grid container centered>
           <Grid.Row style={style.row}>
