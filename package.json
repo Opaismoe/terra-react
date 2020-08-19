@@ -9,6 +9,7 @@
     "react": "^16.13.1",
     "react-awesome-slider": "^4.1.0",
     "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
     "react-intersection-observer": "^8.26.2",
     "react-responsive-carousel": "^3.2.9",
     "react-router-dom": "^5.2.0",
