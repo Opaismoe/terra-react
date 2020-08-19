@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { Grid, Image, Container } from "semantic-ui-react";
+import { Grid, Container } from "semantic-ui-react";
 import { useParams, useHistory } from "react-router-dom"
 
 import AnimatedButton from "../components/AnimatedButton"
+
+import ProjectHeader from "../components/project/ProjectHeader"
+import ProjectHeroImage from "../components/project/ProjectHeroImage"
+import ProjectFluidContent from "../components/project/ProjectFluidContent"
+import PlaceholderHeader from "../components/placeholder/PlaceholderHeader"
+import PlaceholderImage from "../components/placeholder/PlaceholderImage"
+
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
 import '../components/awesome-slider-custom.css'
@@ -26,37 +33,30 @@ const Project = ({ projects, isLoading }) => {
   return (
     <>
         <AnimatedButton title="back" icon="long arrow alternate left" clickHandler={() => history.goBack()} style={{ marginLeft: 0, position: `absolute`, left: 0 }}/>
+        
+        {isLoading && 
+        <Container text>
+          <PlaceholderHeader /> 
+          <PlaceholderImage fluid/>  
+        </Container>
+        }
+        
         <Grid container centered>
           <Grid.Row style={style.row}>
-            {oneProject.map((project) => (
-              <div key={project.id}>
-                <h1 className="bigtitle lead" style={{ marginBottom: 0 }}>
-                  {project.title}
-                </h1>
-                <p className ="lead">
-                  {project.summary}
-                </p>
-                <small>
-                  {project.categories && project.categories.map((category, index) => (
-                    index !== -1 ? `${category} ,` : null
-                  ))}
-                </small>
-              </div>
-            ))}
+            <ProjectHeader oneProject={oneProject}/>
           </Grid.Row>
         </Grid>
 
         <Container fluid>
           <Grid.Row style={style.row}>
-          {oneProject.map((project) => (
-            <Image key={project.id} src={project.image} fluid/>
-          ))}
+            <ProjectHeroImage oneProject={oneProject} />
           </Grid.Row>
         </Container>
 
 
         <Grid container centered>
           <Grid.Row style={style.row}>
+            <ProjectFluidContent oneProject={oneProject} />
           </Grid.Row>
         </Grid>
 
@@ -90,4 +90,9 @@ const style = {
     marginTop: `2.5em`,
     justifyContent: `center`,
   },
+  btn: {
+    marginLeft: 0,
+    position: `absolute`,
+    left: 0,
+  }
 };

@@ -27,8 +27,8 @@ function App() {
   useEffect(() => {
     const fetchProjects = async () => {
       setIsLoading(true);
+
       if (projectCache[projectUrl]) {
-        // console.log(projectCache[projectUrl]);
         const data = projectCache[projectUrl];
         setProjects(data);
         setIsLoading(false);
@@ -57,6 +57,7 @@ function App() {
           autoSuccess
         />
       ) : null}
+
         <SidebarMenu isVisible={isVisible} setIsVisible={setIsVisible} />
         <NavbarMenu isVisible={isVisible} setIsVisible={setIsVisible} />
 
@@ -68,7 +69,7 @@ function App() {
             <Projecten projects={projects} isLoading={isLoading} />
           </Route>
           <Route path="/project/:url_title" >
-            <Project projects={projects} isLoading={isLoading} setProjects={setProjects} />
+            <Project projects={projects} isLoading={isLoading} />
           </Route>
           <Route path="/cases">
             <Cases/>
@@ -95,6 +96,7 @@ const style = {
     top: 0,
     left: 0,
     width: `100%`,
+    background: `none`
   },
 };
 
