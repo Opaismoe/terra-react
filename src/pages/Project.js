@@ -13,9 +13,9 @@ import {
   ProjectVideo
 } from "../components/index";
 
-import AwesomeSlider from "react-awesome-slider";
-import "react-awesome-slider/dist/styles.css";
-import "../components/awesome-slider-custom.css";
+// import AwesomeSlider from "react-awesome-slider";
+// import "react-awesome-slider/dist/styles.css";
+// import "../components/awesome-slider-custom.css";
 
 const Project = ({ projects, isLoading }) => {
   const { url_title } = useParams();
@@ -86,14 +86,13 @@ const Project = ({ projects, isLoading }) => {
         </Grid.Row>
       </Grid> */}
 
+  
       <Grid container centered>
-        <Grid.Row style={style.row}>
-          {oneProject.map((project) => (
-            project.videos.map(id => (
-              <ProjectVideo key={project.id} id={id} />
-            ))
-          ))}
-        </Grid.Row>
+      {oneProject.map((project) => (
+        project.videos.map(id => (
+          <ProjectVideo key={project.id} id={id} />
+        ))
+      ))}
       </Grid>
     </>
   );
