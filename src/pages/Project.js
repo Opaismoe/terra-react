@@ -1,84 +1,100 @@
 import React, { useState, useEffect } from "react";
 import { Grid, Container } from "semantic-ui-react";
-import { useParams, useHistory } from "react-router-dom"
+import { useParams, useHistory } from "react-router-dom";
 
-import AnimatedButton from "../components/AnimatedButton"
+import AnimatedButton from "../components/AnimatedButton";
 
-import ProjectHeader from "../components/project/ProjectHeader"
-import ProjectHeroImage from "../components/project/ProjectHeroImage"
-import ProjectFluidContent from "../components/project/ProjectFluidContent"
-import PlaceholderHeader from "../components/placeholder/PlaceholderHeader"
-import PlaceholderImage from "../components/placeholder/PlaceholderImage"
+import {
+  ProjectHeader,
+  ProjectHeroImage,
+  ProjectFluidContent,
+  PlaceholderHeader,
+  PlaceholderImage,
+  ProjectVideo
+} from "../components/index";
 
-import AwesomeSlider from 'react-awesome-slider';
-import 'react-awesome-slider/dist/styles.css';
-import '../components/awesome-slider-custom.css'
+import AwesomeSlider from "react-awesome-slider";
+import "react-awesome-slider/dist/styles.css";
+import "../components/awesome-slider-custom.css";
 
 const Project = ({ projects, isLoading }) => {
-  const { url_title } = useParams()
-  const history = useHistory()
-  const [oneProject, setOneProject] = useState([])
+  const { url_title } = useParams();
+  const history = useHistory();
+  const [oneProject, setOneProject] = useState([]);
 
   useEffect(() => {
-  const getOneProject = async () => {
-    let oneProject = projects.filter(project => project.url_title === url_title).map(filteredProject => {
-      return filteredProject
-    })
-    console.log(oneProject);
-    setOneProject(oneProject)
-  }
-    getOneProject()
-  }, [projects, url_title])
-  
+    const getOneProject = async () => {
+      let oneProject = projects
+        .filter((project) => project.url_title === url_title)
+        .map((filteredProject) => {
+          return filteredProject;
+        });
+      setOneProject(oneProject);
+    };
+    getOneProject();
+  }, [projects, url_title]);
+
   return (
     <>
-        <AnimatedButton title="back" icon="long arrow alternate left" clickHandler={() => history.goBack()} style={{ marginLeft: 0, position: `absolute`, left: 0 }}/>
-        
-        {isLoading && 
+      <AnimatedButton
+        title="back"
+        icon="long arrow alternate left"
+        clickHandler={() => history.goBack()}
+        style={style.btn}
+      />
+
+      {isLoading && (
         <Container text>
-          <PlaceholderHeader /> 
-          <PlaceholderImage fluid/>  
+          <PlaceholderHeader />
+          <PlaceholderImage fluid />
         </Container>
-        }
-        
-        <Grid container centered>
-          <Grid.Row style={style.row}>
-            <ProjectHeader oneProject={oneProject}/>
-          </Grid.Row>
-        </Grid>
+      )}
 
-        <Container fluid>
-          <Grid.Row style={style.row}>
-            <ProjectHeroImage oneProject={oneProject} />
-          </Grid.Row>
-        </Container>
+      <Grid container centered>
+        <Grid.Row style={style.row}>
+          <ProjectHeader oneProject={oneProject} />
+        </Grid.Row>
+      </Grid>
 
+      <Container fluid>
+        <Grid.Row style={style.row}>
+          <ProjectHeroImage oneProject={oneProject} />
+        </Grid.Row>
+      </Container>
 
-        <Grid container centered>
-          <Grid.Row style={style.row}>
-            <ProjectFluidContent oneProject={oneProject} />
-          </Grid.Row>
-        </Grid>
+      <Grid container centered>
+        <Grid.Row style={style.row}>
+          <ProjectFluidContent oneProject={oneProject} />
+        </Grid.Row>
+      </Grid>
 
-        <Grid container centered>
-          <Grid.Row style={style.row}>
+      <Grid container centered>
+        <Grid.Row style={style.row}></Grid.Row>
+      </Grid>
 
-          </Grid.Row>
-        </Grid>
-
-        <Grid container centered>
-          <Grid.Row style={style.row}>
-            {oneProject.map((project) => (
-              project.fluid_content && project.fluid_content[0].image_gallery ?
-                <AwesomeSlider key={project.id} bullets={false}>
-                {project.fluid_content[0].image_gallery.map(src => (
+      {/* <Grid container centered>
+        <Grid.Row style={style.row}>
+          {oneProject.map((project) =>
+            project.fluid_content && project.fluid_content[0].image_gallery ? (
+              <AwesomeSlider key={project.id} bullets={false}>
+                {project.fluid_content[0].image_gallery.map((src) => (
                   <img key={project.id} data-src={src} alt={src} />
                 ))}
-                </AwesomeSlider>
-                : null
-            ))}
-          </Grid.Row>
-        </Grid>
+              </AwesomeSlider>
+            ) : null
+          )}
+        </Grid.Row>
+      </Grid> */}
+
+      <Grid container centered>
+        <Grid.Row style={style.row}>
+          {oneProject.map((project) => (
+            project.videos.map(id => (
+              <ProjectVideo key={project.id} id={id} />
+            ))
+          ))}
+        </Grid.Row>
+      </Grid>
     </>
   );
 };
@@ -94,5 +110,5 @@ const style = {
     marginLeft: 0,
     position: `absolute`,
     left: 0,
-  }
+  },
 };

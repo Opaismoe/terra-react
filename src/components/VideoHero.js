@@ -2,7 +2,7 @@ import React from 'react'
 import { Embed } from 'semantic-ui-react'
 
 
-const VideoVimeo = ({ isLoading }) => {
+const VideoHero = ({ isLoading }) => {
   return (
     <div className="video__container">
         <Embed
@@ -14,4 +14,4 @@ const VideoVimeo = ({ isLoading }) => {
   )
 }
 
-export default VideoVimeo
+export default VideoHero

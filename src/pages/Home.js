@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Header, Transition } from "semantic-ui-react";
 
-import VideoVimeo from "../components/VideoVimeo";
+import VideoHero from "../components/VideoHero";
 import BigTitle from "../components/BigTitle";
 import MainCarousel from "../components/MainCarousel";
 import Rings from "../components/Rings";
@@ -10,7 +10,7 @@ import ProjectCard from "../components/ProjectCard"
 const Home = ({ isVisible, isLoading, setIsVisible, projects}) => {
   return (
     <>
-      <VideoVimeo />
+      <VideoHero />
       <BigTitle title="Wij zijn een digital design agency." />
       <MainCarousel />
       <BigTitle

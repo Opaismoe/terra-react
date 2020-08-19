@@ -3,7 +3,7 @@ import React from 'react'
 import './VideoHeader.css'
 import { Grid, Card } from 'semantic-ui-react'
 
-const VideoHeader = ({video}) => {
+const VideoHeader = ({ video }) => {
   return (
     <>
       <div className="video__hero__container__overlay">
