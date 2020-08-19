@@ -57,11 +57,6 @@ const Project = ({ projects, isLoading }) => {
 
         <Grid container centered>
           <Grid.Row style={style.row}>
-            {oneProject.map((project) => (
-              project.fluid_content[0].content.map((content => {
-                content
-              }
-            ))}
           </Grid.Row>
         </Grid>
 
