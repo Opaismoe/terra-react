@@ -8,3 +8,7 @@ export { default as PlaceholderCardGrid } from './placeholder/PlaceholderCardGri
 export { default as PlaceholderHeader } from './placeholder/PlaceholderHeader'
 export { default as VideoHeader } from './VideoHeader'
 export { default as VideoHero } from './VideoHero'
+export { default as NavbarMenu } from './navigation/NavbarMenu'
+export { default as SidebarMenu } from './navigation/SidebarMenu'
+export { default as StickyFooter } from './layout/StickyFooter'
+export { default as Footer } from './layout/Footer'

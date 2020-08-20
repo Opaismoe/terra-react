@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, Image, Button, Icon } from "semantic-ui-react";
-import brand from "../terralemon.svg";
+import brand from "../../terralemon.svg";
 import "./NavbarMenu.css";
 
 const NavbarMenu = ({ isVisible, setIsVisible }) => {

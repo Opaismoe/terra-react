@@ -7,14 +7,11 @@ import "./App.css";
 import Home from "./pages/Home";
 import Projecten from "./pages/Projecten";
 import Project from "./pages/Project";
-
-import NavbarMenu from "./components/NavbarMenu";
-import SidebarMenu from "./components/SidebarMenu";
-import StickyFooter from "./components/StickyFooter";
-import Footer from "./components/Footer";
 import News from "./pages/News";
 import Cases from "./pages/Cases";
 import About from "./pages/About";
+
+import { NavbarMenu, SidebarMenu, StickyFooter, Footer } from "./components"
 
 const projectUrl = `https://terralemon-dev.nl/json/projects`;
 const projectCache = {};
