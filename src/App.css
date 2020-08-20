@@ -29,9 +29,8 @@ body, a, p, small, h1, h2, h3, h4, h5, span {
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'gotham-light', serif; 
+  font-family: 'gotham-light', serif !important; 
 }
-
 
 body {
   /* background: #f0f3f6; */
@@ -40,12 +39,6 @@ body {
 .menu a{
   font-family: Calibri, "Lucida Sans Unicode", sans-serif;
   
-}
-
-.bigtitle {
-  font-size: 41px;
-  font-weight: 400;
-  padding: 25px auto;
 }
 
 * {

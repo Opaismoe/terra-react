@@ -36,7 +36,9 @@ function App() {
         setIsLoading(false);
         setProjects(data);
       }
-    };
+    }
+
+
     fetchProjects();
   }, [projects]);
 

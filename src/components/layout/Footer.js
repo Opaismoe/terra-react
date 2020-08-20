@@ -6,13 +6,13 @@ const Footer = () => {
   return (
     <Container fluid textAlign="center" style={{ height: `150px`, fontFamily: `gotham-light`, }}>
       <Grid.Row >
-        <Button icon color="youtube">
+        <Button icon color="youtube" as="a" href="//youtube.com/user/Terralemon" target="_blank">
           <Icon name="youtube" />
         </Button>
-        <Button icon style={{ background: `#19B7EA`, color: `white`}}>
+        <Button icon as="a" href="//vimeo.com/terralemon" target="_blank" style={{ background: `#19B7EA`, color: `white`}}>
           <Icon name="vimeo" />
         </Button>
-        <Button icon color="linkedin">
+        <Button icon as="a" href="//www.linkedin.com/company/terralemon" target="_blank" color="linkedin">
           <Icon name="linkedin" />
         </Button>
       </Grid.Row>
