@@ -1,8 +1,8 @@
 import React from "react";
 import { Grid, Transition, Container } from "semantic-ui-react";
 
-import ProjectCard from "../components/ProjectCard";
-import { PlaceholderCardGrid } from "../components/index";
+import ProjectCard from "../components/project/ProjectCard";
+import { PlaceholderImage } from "../components/index";
 
 const Projecten = ({ projects, isLoading }) => {
   return (
@@ -10,7 +10,7 @@ const Projecten = ({ projects, isLoading }) => {
       {/* <Transition visible={!isLoading} animation="fade" duration={450}> */}
         <Grid container centered>
           <Grid.Row style={style.row}>
-          {isLoading && <PlaceholderCardGrid cardCount={12}/> }
+          {isLoading && <PlaceholderImage count={12}/> }
             {projects.map((project, index) => {
               if (index <= 3) {
                 return (

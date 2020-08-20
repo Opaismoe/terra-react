@@ -5,6 +5,7 @@ import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import "../../components/awesome-slider-custom.css";
 import { Header } from "semantic-ui-react";
+import ProjectVideo from "./ProjectVideo"
 
 const ProjectFluidContent = ({ oneProject }) => {
   /**
@@ -40,6 +41,10 @@ const ProjectFluidContent = ({ oneProject }) => {
               <img key={i} data-src={src} alt={src} />
             ))}
           </AwesomeSlider>
+        ) : content.video_gallery ? (
+          content.video_gallery.map((url, index) => (
+            <ProjectVideo key={index} url={url} />
+          ))
         ) : null
       )}
     </>

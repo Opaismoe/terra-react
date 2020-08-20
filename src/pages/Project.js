@@ -46,7 +46,7 @@ const Project = ({ projects, isLoading }) => {
       {isLoading && (
         <Container text>
           <PlaceholderHeader />
-          <PlaceholderImage fluid />
+          <PlaceholderImage />
         </Container>
       )}
 
@@ -69,11 +69,13 @@ const Project = ({ projects, isLoading }) => {
       </Grid>
   
       <Grid container centered>
-      {oneProject.map((project) => (
-        project.videos.map((id, index) => (
-          <ProjectVideo key={index} id={id} />
-        ))
-      ))}
+        <Grid.Row style={style.row}>
+          {oneProject.map((project) => (
+            project.videos.map((url, index) => (
+              <ProjectVideo key={index} url={url} />
+            ))
+          ))}
+          </Grid.Row>
       </Grid>
     </>
   );

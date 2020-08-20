@@ -19,9 +19,6 @@ const ProjectCard = ({ project, sm, md, lg, isLoading }) => {
               <h3>{he.decode(project.title)}</h3>
             </Card.Header>
             <Card.Meta>{project.date}</Card.Meta>
-            {/* <Card.Description>
-              
-            </Card.Description> */}
           </Card.Content>
         </Card>
       </Link>
