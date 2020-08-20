@@ -1,22 +1,29 @@
 import React from "react";
 
-import he from "he"
+import he from "he";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import "../../components/awesome-slider-custom.css";
 import { Header } from "semantic-ui-react";
 
 const ProjectFluidContent = ({ oneProject }) => {
+  /**
+   * @param {object} content encoded html entities from expression engine's backend
+   */
   const createMarkup = (content) => {
-    let data = he.decode(content)
-    return {__html: data}
-  }
-  
+    let data = he.decode(content);
+    return { __html: data };
+  };
+
   return (
     <>
       {oneProject[0]?.fluid_content.map((content, i) =>
         content.content ? (
-          <div dangerouslySetInnerHTML={createMarkup(content.content)}></div>
+          <div
+            key={i}
+            dangerouslySetInnerHTML={createMarkup(content.content)}
+            style={{ margin: `2.5em 0`}}
+          ></div>
         ) : content.image_project ? (
           <img
             key={i}
@@ -29,9 +36,9 @@ const ProjectFluidContent = ({ oneProject }) => {
           </Header>
         ) : content.image_gallery ? (
           <AwesomeSlider key={i} bullets={false}>
-          {content.image_gallery.map(src => (
-            <img key={i} data-src={src} alt={src} />
-          ))}
+            {content.image_gallery.map((src) => (
+              <img key={i} data-src={src} alt={src} />
+            ))}
           </AwesomeSlider>
         ) : null
       )}

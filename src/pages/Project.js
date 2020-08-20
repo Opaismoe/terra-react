@@ -37,7 +37,7 @@ const Project = ({ projects, isLoading }) => {
   return (
     <>
       <AnimatedButton
-        title="back"
+        title="Terug"
         icon="long arrow alternate left"
         clickHandler={() => history.goBack()}
         style={style.btn}
@@ -67,30 +67,11 @@ const Project = ({ projects, isLoading }) => {
           <ProjectFluidContent oneProject={oneProject} />
         </Grid.Row>
       </Grid>
-
-      <Grid container centered>
-        <Grid.Row style={style.row}></Grid.Row>
-      </Grid>
-
-      {/* <Grid container centered>
-        <Grid.Row style={style.row}>
-          {oneProject.map((project) =>
-            project.fluid_content && project.fluid_content[0].image_gallery ? (
-              <AwesomeSlider key={project.id} bullets={false}>
-                {project.fluid_content[0].image_gallery.map((src) => (
-                  <img key={project.id} data-src={src} alt={src} />
-                ))}
-              </AwesomeSlider>
-            ) : null
-          )}
-        </Grid.Row>
-      </Grid> */}
-
   
       <Grid container centered>
       {oneProject.map((project) => (
-        project.videos.map(id => (
-          <ProjectVideo key={project.id} id={id} />
+        project.videos.map((id, index) => (
+          <ProjectVideo key={index} id={id} />
         ))
       ))}
       </Grid>
@@ -103,7 +84,7 @@ export default Project;
 const style = {
   row: {
     marginTop: `2.5em`,
-    justifyContent: `center`,
+    // justifyContent: `center`,
   },
   btn: {
     marginLeft: 0,

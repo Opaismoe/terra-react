@@ -9,12 +9,14 @@ const ProjectVideo = ({ id }) => {
   }
 
   return (
-    <Grid.Column computer={5}>
+    <Grid.Column computer={5} stretched style={{ marginBottom: `2.5em` }}>
       <Embed
         id={getId(id)}
         // placeholder="/images/vimeo-example.jpg"
         source="vimeo"
-        hd={true}
+        icon="play"
+        color="#00b1dd"
+        hd
       />
     </Grid.Column>
   );
