@@ -1,0 +1,11 @@
+.profile__content {
+  position: absolute;
+}
+
+.profile__content .header {
+  color: var(--primary) !important;
+}
+
+.profile__content .meta {
+  color: white !important;
+}

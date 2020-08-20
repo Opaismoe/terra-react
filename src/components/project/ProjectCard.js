@@ -3,6 +3,8 @@ import { Card, Grid, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom"
 import he from "he"
 
+import "./ProjectCard.css"
+
 const ProjectCard = ({ project, sm, md, lg }) => {
   return (
     <Grid.Column mobile={sm} tablet={md} computer={lg} >

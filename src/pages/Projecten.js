@@ -2,7 +2,6 @@ import React from "react";
 import { Grid } from "semantic-ui-react";
 
 import { PlaceholderProjectCard, ProjectCard } from "../components/index";
-import "../components/project/ProjectCard.css"
 
 const Projecten = ({ projects, isLoading }) => {
   return (
