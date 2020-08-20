@@ -1,11 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Embed, Grid } from "semantic-ui-react";
 
 const ProjectVideo = ({ url, count = 16 }) => {
+
+  /**
+   * @description get the id (1234556) from the end of the url giving by expression engine.
+   * @param {string} url 
+   */
   const getId = (url) => {
     let vimUrl = url.split('/')
     let vimId = vimUrl[vimUrl.length-1]
-    return vimId + "" // has to return a string as url-prop
+    return vimId
   }
 
   const getPlaceholderImage = (url) => {
@@ -14,20 +19,21 @@ const ProjectVideo = ({ url, count = 16 }) => {
     return placeholderURL
   }
 
-  function getVideoThumbnails(url) {
-    let vimId = getId(url)
-    fetch(`https://vimeo.com/api/v2/video/${vimId}.json`)
-    .then(response => { return response.text() })
-    .then(data => {
-      const { thumbnail_large } = JSON.parse(data)[0];
-      const large = thumbnail_large + ""
-      console.log("" + large)
-      return large
-    })
-    .catch(error => {
-      console.error(error);
-    });
-  }
+  // TODO: fix this and stop using the api from vumbnail. 
+  // function getVideoThumbnails(url) {
+  //   let vimId = getId(url)
+  //   fetch(`https://vimeo.com/api/v2/video/${vimId}.json`)
+  //   .then(response => { return response.text() })
+  //   .then(data => {
+  //     const { thumbnail_large } = JSON.parse(data)[0];
+  //     const large = thumbnail_large + ""
+  //     console.log("" + large)
+  //     return large
+  //   })
+  //   .catch(error => {
+  //     console.error(error);
+  //   });
+  // }
 
   return (
     <Grid.Column computer={count} stretched style={{ marginBottom: `2.5em`, paddingLeft: 0, paddingRight: 0 }}>
@@ -37,8 +43,7 @@ const ProjectVideo = ({ url, count = 16 }) => {
         icon="play"
         placeholder={getPlaceholderImage(url)}
         color="#00b1dd"
-        hd
-        autoplay={true}
+        hd={true}
       />
     </Grid.Column>
   );

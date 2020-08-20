@@ -9,13 +9,12 @@ import {
   ProjectHeroImage,
   ProjectFluidContent,
   PlaceholderHeader,
-  PlaceholderImage,
   ProjectVideo
 } from "../components/index";
 
-// import AwesomeSlider from "react-awesome-slider";
-// import "react-awesome-slider/dist/styles.css";
-// import "../components/awesome-slider-custom.css";
+import AwesomeSlider from "react-awesome-slider";
+import "react-awesome-slider/dist/styles.css";
+import "../components/awesome-slider-custom.css";
 
 const Project = ({ projects, isLoading }) => {
   const { url_title } = useParams();
@@ -46,7 +45,6 @@ const Project = ({ projects, isLoading }) => {
       {isLoading && (
         <Container text>
           <PlaceholderHeader />
-          <PlaceholderImage />
         </Container>
       )}
 
@@ -70,10 +68,10 @@ const Project = ({ projects, isLoading }) => {
   
       <Grid container centered>
         <Grid.Row style={style.row}>
-          {oneProject.map((project) => (
-            project.videos.map((url, index) => (
-              <ProjectVideo key={index} url={url} />
-            ))
+          {oneProject.map((project, i) => (
+              project.videos.map((url, index) => (
+                <ProjectVideo key={index} url={url} />
+              ))
           ))}
           </Grid.Row>
       </Grid>

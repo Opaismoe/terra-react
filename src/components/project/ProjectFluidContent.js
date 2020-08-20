@@ -5,7 +5,7 @@ import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import "../../components/awesome-slider-custom.css";
 import { Header } from "semantic-ui-react";
-import ProjectVideo from "./ProjectVideo"
+import ProjectVideo from "./ProjectVideo";
 
 const ProjectFluidContent = ({ oneProject }) => {
   /**
@@ -18,12 +18,12 @@ const ProjectFluidContent = ({ oneProject }) => {
 
   return (
     <>
-      {oneProject[0]?.fluid_content.map((content, i) =>
+      {oneProject[0]?.fluid_content?.map((content, i) =>
         content.content ? (
           <div
             key={i}
             dangerouslySetInnerHTML={createMarkup(content.content)}
-            style={{ margin: `2.5em 0`}}
+            style={{ margin: `2.5em 0` }}
           ></div>
         ) : content.image_project ? (
           <img
