@@ -1,0 +1,7 @@
+export { default as About } from './About'
+export { default as Case } from './Case'
+export { default as Cases } from './Cases'
+export { default as Home } from './Home'
+export { default as News } from './News'
+export { default as Project } from './Project'
+export { default as Projecten } from './Projecten'
