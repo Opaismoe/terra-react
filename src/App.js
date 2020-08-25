@@ -9,6 +9,7 @@ import Projecten from "./pages/Projecten";
 import Project from "./pages/Project";
 import News from "./pages/News";
 import Cases from "./pages/Cases";
+import Case from "./pages/Case";
 import About from "./pages/About";
 
 import { NavbarMenu, SidebarMenu, StickyFooter, Footer } from "./components"
@@ -42,6 +43,8 @@ function App() {
     fetchProjects();
   }, [projects]);
 
+  let kasusen = projects.map(project => project.case);
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -71,7 +74,10 @@ function App() {
             <Project projects={projects} isLoading={isLoading} />
           </Route>
           <Route path="/cases">
-            <Cases/>
+            <Cases projects={projects} isLoading={isLoading} />
+          </Route>
+          <Route path="/case/:url_title">
+            <Case kasus={kasusen} projects={projects} isLoading={isLoading} />
           </Route>
           <Route path="/nieuws">
             <News/>
