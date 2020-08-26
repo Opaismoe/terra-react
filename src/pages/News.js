@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Grid, Image } from "semantic-ui-react";
-import { HeroHeader } from "../components/index";
+import { HeroHeader, PlaceholderHeader } from "../components/index";
 
 import he from "he";
 import "./News.module.css";
@@ -30,12 +30,13 @@ const News = () => {
       <Grid.Row style={style.row}>
         {news.map((item, i) => (
           <HeroHeader
-            key={i}
-            title={item.title}
-            date={item.formated_entry_date}
+          key={i}
+          title={item.title}
+          date={item.formated_entry_date}
           />
-        ))}
+          ))}
         <Grid.Column width={16}>
+        {isLoading ? <PlaceholderHeader />: null}
           {news.map((item, i) => (
             <>
             <Image as='a' href={`project/${item.project.url_title}`} key={i+10} src={item.project.image_project} fluid/>
@@ -57,7 +58,6 @@ export default News;
 const style = {
   row: {
     marginTop: `2.5em`,
-    // justifyContent: `center`,
   },
   btn: {
     marginLeft: 0,

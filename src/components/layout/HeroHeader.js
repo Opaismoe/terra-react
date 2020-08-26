@@ -5,7 +5,7 @@ import { Container, Header } from "semantic-ui-react";
 const HeroHeader = ({title, date}) => {
   return (
     <Container fluid>
-      <Header as="h2" content={title} subheader={date}/>
+      <Header className="bigtitle lead" as="h2" content={title} subheader={date}/>
     </Container>
   )
 }
