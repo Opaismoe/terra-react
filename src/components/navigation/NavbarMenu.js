@@ -20,7 +20,7 @@ const NavbarMenu = ({ isVisible, setIsVisible }) => {
   })
 
   return (
-    <Menu style={style.navbar} borderless>
+    <Menu as="nav" style={style.navbar} borderless>
       <Menu.Item name="Home">
         <Link to="/">
           <Image src={brand} style={style.image} />

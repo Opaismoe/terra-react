@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Grid, Card, Image } from 'semantic-ui-react'
+import { Container, Card, Image } from 'semantic-ui-react'
 import VideoHeader from '../components/VideoHeader'
 import video from '../videos/vid_bg.mp4'
 import CardReveal from '../components/CardReveal'

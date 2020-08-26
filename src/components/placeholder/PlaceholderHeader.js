@@ -8,10 +8,6 @@ const PlaceholderHeader = () => {
           <Placeholder.Line length="long"/>
           <Placeholder.Line />
         </Placeholder.Header>
-        <Placeholder.Paragraph>
-          <Placeholder.Line />
-          <Placeholder.Line />
-        </Placeholder.Paragraph>
       </Placeholder>
   )
 }
