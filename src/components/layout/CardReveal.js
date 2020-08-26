@@ -5,7 +5,7 @@ const CardReveal = ({ title, listItems = [], paragraph }) => (
   <>
     <Reveal as={Card} animated="move down">
       <Reveal.Content visible style={style.card}>
-        <Card.Content style={{ zIndex: 0 }}>
+        <Card.Content style={{ zIndex: `1 !important`,  }}>
         <Card.Header>
           {title} <Icon name="arrow down" />
         </Card.Header>
@@ -16,6 +16,7 @@ const CardReveal = ({ title, listItems = [], paragraph }) => (
           </List>
         </Card.Content>
       </Reveal.Content>
+
       <Reveal.Content as={Card} hidden style={{ background: `var(--primary)`, color: `white`}}>
         <Card.Content>
           <Card.Header>
@@ -35,28 +36,3 @@ const style = {
 }
 
 export default CardReveal;
-
-// <List divided selection>
-// <List.Item>
-//   <Label color='red' horizontal>
-//     Fruit
-//   </Label>
-//   Kumquats
-// </List.Item>
-// <List.Item>
-//   <Label color='purple' horizontal>
-//     Candy
-//   </Label>
-//   Ice Cream
-// </List.Item>
-// <List.Item>
-//   <Label color='red' horizontal>
-//     Fruit
-//   </Label>
-//   Orange
-// </List.Item>
-// <List.Item>
-//   <Label horizontal>Dog</Label>
-//   Poodle
-// </List.Item>
-// </List>

@@ -2,14 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Grid, Container } from "semantic-ui-react";
 import { useParams, useHistory } from "react-router-dom";
 
-import AnimatedButton from "../components/AnimatedButton";
-
 import {
   ProjectHeader,
   ProjectHeroImage,
   ProjectFluidContent,
   PlaceholderHeader,
-  ProjectVideo
+  ProjectVideo,
+  AnimatedButton
 } from "../components/index";
 
 import "react-awesome-slider/dist/styles.css";

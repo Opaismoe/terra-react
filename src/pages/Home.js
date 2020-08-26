@@ -1,11 +1,6 @@
 import React from "react";
 import { Grid, Header, Transition } from "semantic-ui-react";
-
-import VideoHero from "../components/VideoHero";
-import BigTitle from "../components/BigTitle";
-import MainCarousel from "../components/MainCarousel";
-import Rings from "../components/Rings";
-import ProjectCard from "../components/project/ProjectCard"
+import { VideoHero, BigTitle, MainCarousel, Rings, ProjectCard } from "../components/"
 
 const Home = ({ isVisible, isLoading, setIsVisible, projects}) => {
   return (
