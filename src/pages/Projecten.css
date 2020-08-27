@@ -1,0 +1,3 @@
+.ui.button.toggle.active, .ui.buttons .button.toggle.active, .ui.toggle.buttons .active.button { 
+  background-color: var(--primary) !important;
+}

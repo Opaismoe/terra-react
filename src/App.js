@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { Progress } from "semantic-ui-react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+
+import { Progress } from "semantic-ui-react";
+import { About, Case, Cases, Home, News, Project, Projecten } from "./pages";
+import { NavbarMenu, SidebarMenu, StickyFooter, Footer } from "./components";
 
 import "./App.css";
 
-import { About, Case, Cases, Home, News, Project, Projecten } from "./pages"
-import { NavbarMenu, SidebarMenu, StickyFooter, Footer } from "./components"
-
-
-let PROJECT_URL = '/public/projects.json'
+let PROJECT_URL = "/public/projects.json";
 if (process.env.NODE_ENV === "development") {
-  PROJECT_URL = `https://terralemon-dev.nl/json/projects`
+  PROJECT_URL = `https://terralemon-dev.nl/json/projects`;
 }
 const PROJECT_CACHE = {};
 
@@ -34,38 +33,37 @@ function App() {
         setIsLoading(false);
         setProjects(data);
       }
-    }
+    };
     fetchProjects();
-  }, [projects]);
+  }, []);
 
-  let kasusen = projects.map(project => project.case);
+  let kasusen = projects.map((project) => project.case);
 
   return (
     <div className="App">
       <BrowserRouter>
-
-      {isLoading ? (
-        <Progress
-          style={style.progress}
-          size="tiny"
-          percent={isLoading ? 88 : 0}
-          active={true}
-          color="blue"
-          autoSuccess
-        />
-      ) : null}
+        {isLoading ? (
+          <Progress
+            style={style.progress}
+            size="tiny"
+            percent={isLoading ? 88 : 0}
+            active={true}
+            color="blue"
+            autoSuccess
+          />
+        ) : null}
 
         <SidebarMenu isVisible={isVisible} setIsVisible={setIsVisible} />
         <NavbarMenu isVisible={isVisible} setIsVisible={setIsVisible} />
 
         <Switch>
-          <Route exact path="/" >
-            <Home isLoading={isLoading} projects={projects}/>
+          <Route exact path="/">
+            <Home isLoading={isLoading} projects={projects} />
           </Route>
           <Route path="/projecten">
-            <Projecten projects={projects} isLoading={isLoading} />
+            <Projecten projects={projects} isLoading={isLoading} setProjects={setProjects} />
           </Route>
-          <Route path="/project/:url_title" >
+          <Route path="/project/:url_title">
             <Project projects={projects} isLoading={isLoading} />
           </Route>
           <Route path="/cases">
@@ -75,16 +73,15 @@ function App() {
             <Case kasus={kasusen} projects={projects} isLoading={isLoading} />
           </Route>
           <Route path="/nieuws">
-            <News/>
+            <News />
           </Route>
           <Route path="/over">
-            <About/>
+            <About />
           </Route>
         </Switch>
-        
-        <Footer/>
-        <StickyFooter/>
-        
+
+        <Footer />
+        <StickyFooter />
       </BrowserRouter>
     </div>
   );
@@ -96,9 +93,8 @@ const style = {
     top: 0,
     left: 0,
     width: `100%`,
-    background: `none`
+    background: `none`,
   },
 };
-
 
 export default App;

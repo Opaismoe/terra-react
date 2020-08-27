@@ -53,7 +53,7 @@ const Home = ({ isVisible, isLoading, setIsVisible, projects}) => {
         title="Laatste projecten"
       />
 
-      <Transition visible={!isLoading} animation='fade' duration={450}>
+      <Transition visible={!isLoading} animation='fade' duration={4500}>
         <Grid>
           <Grid.Row style={style.row}>
             {projects.map((project, index) => {
