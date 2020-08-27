@@ -9,7 +9,7 @@ import {
   Segment,
 } from "semantic-ui-react";
 import video from "../videos/vid_bg.mp4";
-import { VideoHeader, CardReveal, BigTitle } from "../components/";
+import { VideoHeader, BigTitle } from "../components/";
 import "./About.css";
 
 const About = () => {
@@ -18,17 +18,7 @@ const About = () => {
       <Container fluid>
         <VideoHeader video={video} />
       </Container>
-
-      {/* <Container>
-        <BigTitle title="Onze werkwijze"/>
-        <Card.Group itemsPerRow={4}>
-          <CardReveal title="Strategie" listItems={["Briefing", "Doelgroep onderzoek", "Strategie", "Concept"]}/>
-          <CardReveal title="Design" listItems={["Moodboard", "Gebruiker scenario's", "Interactie ontwerp", "Storyboard", "Grafisch ontwerp"]}/>
-          <CardReveal title="Realisatie" listItems={["Front end development", "Content managment systeem", "Motion compositie en montage", "Animatie en modeling", "Copy writing"]}/>
-          <CardReveal title="Groei" listItems={["Stijlgids", "Website analytics", "Campagnes"]}/>
-        </Card.Group>
-      </Container> */}
-
+      
       <Container>
         <BigTitle title="Wij zijn Terralemon" />
         <Card.Group itemsPerRow={3}>
