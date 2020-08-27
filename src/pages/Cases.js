@@ -5,6 +5,7 @@ import { PlaceholderProjectCard, CaseCard } from "../components/index";
 
 const Cases = ({ projects, isLoading }) => {
   let kasusen = projects.map((project) => project.case);
+  let scrambledProjects = projects.sort(function (a, b) {return Math.random() - 0.5;});
 
   return (
     <>
@@ -19,13 +20,13 @@ const Cases = ({ projects, isLoading }) => {
           {isLoading && (
             <PlaceholderProjectCard count={16} sm={12} md={8} lg={4} />
           )}
-          {projects.map((project) => (
+          {scrambledProjects.map((project, index) => (
             <CaseCard
-              key={project.case.id * 23}
+              key={index}
               project={project}
               sm={12}
               md={8}
-              lg={16}
+              lg={8}
             />
           ))}
         </Grid.Row>

@@ -1,15 +1,12 @@
 import React from "react";
 import { Card, Grid, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom"
-import he from "he"
-
-// import "./ProjectCard.css"
 
 const CaseCard = ({ project, sm, md, lg }) => {
   return (
     <Grid.Column mobile={sm} tablet={md} computer={lg} >
       <Link to={`/case/${project.case.url_title}`}>
-        <Card fluid raised className="kasus__card">
+        <Card fluid raised className="kasus__card" style={{ marginBottom: `2.5em` }}>
         <Image
             src={project.image}
             fluid

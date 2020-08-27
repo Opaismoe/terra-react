@@ -5,8 +5,6 @@ import { useParams, useHistory } from "react-router-dom";
 import {
   ProjectHeader,
   AnimatedButton,
-  ProjectHeroImage,
-  ProjectFluidContent,
   PlaceholderHeader,
 } from "../components/index";
 
