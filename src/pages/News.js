@@ -5,7 +5,7 @@ import { HeroHeader, PlaceholderHeader } from "../components/index";
 import he from "he";
 import "./News.module.css";
 
-let NEWS_URL = '/public/news.json'
+let NEWS_URL = '/news.json'
 if (process.env.NODE_ENV === "development") {
   NEWS_URL = `https://terralemon-dev.nl/json/news`
 }
