@@ -4,14 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import "./App.css";
 
-import Home from "./pages/Home";
-import Projecten from "./pages/Projecten";
-import Project from "./pages/Project";
-import News from "./pages/News";
-import Cases from "./pages/Cases";
-import Case from "./pages/Case";
-import About from "./pages/About";
-
+import { About, Case, Cases, Home, News, Project, Projecten } from "./pages"
 import { NavbarMenu, SidebarMenu, StickyFooter, Footer } from "./components"
 
 const projectUrl = `https://terralemon-dev.nl/json/projects`;
