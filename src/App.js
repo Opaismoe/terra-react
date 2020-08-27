@@ -7,8 +7,12 @@ import "./App.css";
 import { About, Case, Cases, Home, News, Project, Projecten } from "./pages"
 import { NavbarMenu, SidebarMenu, StickyFooter, Footer } from "./components"
 
-const projectUrl = `https://terralemon-dev.nl/json/projects`;
-const projectCache = {};
+
+let PROJECT_URL = '/public/projects.json'
+if (process.env.NODE_ENV === "development") {
+  PROJECT_URL = `https://terralemon-dev.nl/json/projects`
+}
+const PROJECT_CACHE = {};
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -19,20 +23,18 @@ function App() {
     const fetchProjects = async () => {
       setIsLoading(true);
 
-      if (projectCache[projectUrl]) {
-        const data = projectCache[projectUrl];
+      if (PROJECT_CACHE[PROJECT_URL]) {
+        const data = PROJECT_CACHE[PROJECT_URL];
         setProjects(data);
         setIsLoading(false);
       } else {
-        const projects = await fetch(`https://terralemon-dev.nl/json/projects`);
+        const projects = await fetch(PROJECT_URL);
         const data = await projects.json();
-        projectCache[projectUrl] = data;
+        PROJECT_CACHE[PROJECT_URL] = data;
         setIsLoading(false);
         setProjects(data);
       }
     }
-
-
     fetchProjects();
   }, [projects]);
 

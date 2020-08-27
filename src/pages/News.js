@@ -5,6 +5,11 @@ import { HeroHeader, PlaceholderHeader } from "../components/index";
 import he from "he";
 import "./News.module.css";
 
+let NEWS_URL = '/public/news.json'
+if (process.env.NODE_ENV === "development") {
+  NEWS_URL = `https://terralemon-dev.nl/json/news`
+}
+
 const News = () => {
   const [news, setNews] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -17,7 +22,7 @@ const News = () => {
   useEffect(() => {
     const fetchNews = async () => {
       setIsLoading(true);
-      const news = await fetch(`https://terralemon-dev.nl/json/news`);
+      const news = await fetch(NEWS_URL);
       const data = await news.json();
       setIsLoading(false);
       setNews(data);
