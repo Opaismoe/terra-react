@@ -32,7 +32,7 @@ const News = () => {
 
   return (
     <Grid container centered>
-      <Grid.Row style={style.row}>
+      <Grid.Row className="row">
         {news.map((item, i) => (
           <HeroHeader
           key={i}
@@ -48,7 +48,7 @@ const News = () => {
             <div
               key={i}
               dangerouslySetInnerHTML={createMarkup(item.content_field)}
-              style={{ margin: `2.5em 0` }}
+              className="content__block"
               ></div>
             </>
           ))}
@@ -59,14 +59,3 @@ const News = () => {
 };
 
 export default News;
-
-const style = {
-  row: {
-    marginTop: `2.5em`,
-  },
-  btn: {
-    marginLeft: 0,
-    position: `absolute`,
-    left: 0,
-  },
-};

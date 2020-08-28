@@ -1,3 +1,17 @@
 p {
   text-align: center;
 }
+
+.content__block {
+  margin: 2.5em 0;
+}
+
+.row {
+  margin-top: 2.5em;
+}
+
+.btn {
+  margin-left: 0;
+  position: absolute;
+  left: 0;
+}
