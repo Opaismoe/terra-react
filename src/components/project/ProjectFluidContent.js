@@ -23,7 +23,7 @@ const ProjectFluidContent = ({ oneProject }) => {
           <div
             key={i}
             dangerouslySetInnerHTML={createMarkup(content.content)}
-            style={{ margin: `2.5em 0` }}
+            className="row fluid__content"
           ></div>
         ) : content.image_project ? (
           <img

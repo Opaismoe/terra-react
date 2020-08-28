@@ -2,7 +2,7 @@
   --primary: #00b1dd;
 }
 
-.primary { background: var(--primary) !important; }
+.bg-primary { background: var(--primary) !important; color: white !important; }
 
 @import './typography.css';
 @font-face {
@@ -32,8 +32,8 @@ h1, h2, h3, h4, h5 {
   font-family: 'gotham-light', serif !important; 
 }
 
-body {
-  /* background: #f0f3f6; */
+html {
+  scroll-behavior: smooth;
 }
 
 .menu a{
@@ -53,4 +53,12 @@ body {
 
 .video__container .ui.embed {
   margin-top: -7vw;
+}
+
+.row {
+  margin: 2.5em 0;
+}
+
+.fluid__content strong {
+  color: var(--primary);
 }

@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { Grid, Button } from "semantic-ui-react";
+import { Grid } from "semantic-ui-react";
 
-import { PlaceholderProjectCard, ProjectCard } from "../components/index";
+import {
+  PlaceholderProjectCard,
+  ProjectCard,
+  ProjectFilters,
+} from "../components/index";
 
-import "./Projecten.css"
+import "./Projecten.css";
 
-const Projecten = ({ projects, isLoading, setProjects }) => {
+const Projecten = ({ projects, isLoading }) => {
   const [checkboxes, setCheckboxes] = useState(["Alle"]);
   const [filtered, setFiltered] = useState([]);
 
@@ -14,38 +18,26 @@ const Projecten = ({ projects, isLoading, setProjects }) => {
       setFiltered(projects);
     } else {
       let filteredProjects = projects
-      .filter((project) => project.categories.includes(value))
-      .map((filtered) => {
+        .filter((project) => project.categories.includes(value))
+        .map((filtered) => {
           return filtered;
         });
-        setFiltered(filteredProjects);
-      }
-      setCheckboxes(value);
+      setFiltered(filteredProjects);
+    }
+    setCheckboxes(value);
   };
 
   useEffect(() => {
-    setFiltered(projects) 
-    setCheckboxes('Alle')
-  }, [projects])
-
+    setFiltered(projects);
+    setCheckboxes("Alle");
+  }, [projects]);
 
   return (
     <>
+      <ProjectFilters checkboxes={checkboxes} filterProjects={filterProjects} />
+
       <Grid container centered>
-        <Grid.Row style={style.row}>
-          <Button.Group widths="4">
-            <Button toggle active={checkboxes === "Alle"} onClick={filterProjects} value="Alle">Alle projecten</Button>
-            <Button.Or text=""/>
-            <Button toggle active={checkboxes === "Motion"} onClick={filterProjects} value="Motion">Motion</Button>
-            <Button.Or text=""/>
-            <Button toggle active={checkboxes === "Identiteit"} onClick={filterProjects} value="Identiteit">Identiteit</Button>
-            <Button.Or text=""/>
-            <Button toggle active={checkboxes === "Online"} onClick={filterProjects} value="Online">Online</Button>
-          </Button.Group>
-        </Grid.Row>
-      </Grid>
-      <Grid container centered>
-        <Grid.Row style={style.row}>
+        <Grid.Row className="row">
           {isLoading && (
             <PlaceholderProjectCard count={4} sm={12} md={8} lg={8} />
           )}

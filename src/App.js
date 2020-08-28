@@ -8,9 +8,9 @@ import { NavbarMenu, SidebarMenu, StickyFooter, Footer } from "./components";
 import "./App.css";
 
 let PROJECT_URL = "/projects.json";
-if (process.env.NODE_ENV === "development") {
-  PROJECT_URL = `https://terralemon-dev.nl/json/projects`;
-}
+// if (process.env.NODE_ENV === "development") {
+  // PROJECT_URL = `https://terralemon-dev.nl/json/projects`;
+// }
 const PROJECT_CACHE = {};
 
 function App() {
