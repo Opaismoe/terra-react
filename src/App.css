@@ -47,12 +47,13 @@ html {
 }
 
 .video__container {
-  height: 45vw;
+  height: 35vw;
+  max-height: 600px;
   overflow: hidden;
 }
 
 .video__container .ui.embed {
-  margin-top: -7vw;
+  margin-top: -13vw;
 }
 
 .row {
