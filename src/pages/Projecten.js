@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Grid, Button, Icon, Image } from "semantic-ui-react";
+import { Grid } from "semantic-ui-react";
 
 import {
   PlaceholderProjectCard,

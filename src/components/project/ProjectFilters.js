@@ -11,36 +11,41 @@ const ProjectFilters = ({ checkboxes, filterProjects}) => {
             active={checkboxes === "Alle"}
             onClick={filterProjects}
             value="Alle"
-            animated
+            animated="vertical"
           >
             <Button.Content visible>Alle projecten</Button.Content>
-            <Button.Content hidden>
-              <Image src="https://www.terralemon.nl/img/general/terralemon_lemon.gif"></Image>
-            </Button.Content>
+            <Button.Content hidden>Alle projecten</Button.Content>
           </Button>
           <Button
             toggle
             active={checkboxes === "Motion"}
             onClick={filterProjects}
             value="Motion"
+            animated="vertical"
           >
-            Motion
+            <Button.Content visible>Motion</Button.Content>
+            <Button.Content hidden>Motion</Button.Content>
           </Button>
           <Button
             toggle
             active={checkboxes === "Identiteit"}
             onClick={filterProjects}
             value="Identiteit"
+            animated="vertical"
           >
-            Identiteit
+            <Button.Content visible>Identiteit</Button.Content>
+            <Button.Content hidden>Identiteit</Button.Content>
+            
           </Button>
           <Button
             toggle
             active={checkboxes === "Online"}
             onClick={filterProjects}
             value="Online"
+            animated="vertical"
           >
-            Online
+            <Button.Content visible>Online</Button.Content>
+            <Button.Content hidden>Online</Button.Content>
           </Button>
         </Button.Group>
       </Grid.Row>

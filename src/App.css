@@ -2,7 +2,7 @@
   --primary: #00b1dd;
 }
 
-.primary { background: var(--primary) !important; }
+.bg-primary { background: var(--primary) !important; color: white !important; }
 
 @import './typography.css';
 @font-face {
@@ -30,6 +30,10 @@ body, a, p, small, h1, h2, h3, h4, h5, span {
 
 h1, h2, h3, h4, h5 {
   font-family: 'gotham-light', serif !important; 
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .menu a{

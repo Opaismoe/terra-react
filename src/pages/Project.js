@@ -8,7 +8,9 @@ import {
   ProjectFluidContent,
   PlaceholderHeader,
   ProjectVideo,
-  AnimatedButton
+  AnimatedButton,
+  ScrollToTop,
+  ScrollToTopButton
 } from "../components/index";
 
 import "react-awesome-slider/dist/styles.css";
@@ -33,6 +35,7 @@ const Project = ({ projects, isLoading }) => {
 
   return (
     <>
+      <ScrollToTop/>
       <AnimatedButton
         title="Terug"
         icon="long arrow alternate left"
@@ -73,6 +76,8 @@ const Project = ({ projects, isLoading }) => {
           ))}
           </Grid.Row>
       </Grid>
+      
+      <ScrollToTopButton/>
     </>
   );
 };

@@ -6,6 +6,8 @@ import {
   ProjectHeader,
   AnimatedButton,
   PlaceholderHeader,
+  ProjectFluidContent,
+  ProjectHeroImage
 } from "../components/index";
 
 const Case = ({ projects, isLoading }) => {
@@ -45,13 +47,13 @@ const Case = ({ projects, isLoading }) => {
 
       <Container fluid>
         <Grid.Row className="row">
-          {/* <ProjectHeroImage oneProject={oneProject} /> */}
+          <ProjectHeroImage oneProject={kaseProjects} />
         </Grid.Row>
       </Container>
 
       <Grid container centered>
         <Grid.Row className="row">
-          {/* <ProjectFluidContent oneProject={oneProject} /> */}
+          <ProjectFluidContent oneProject={kaseProjects} />
         </Grid.Row>
       </Grid>
     </>

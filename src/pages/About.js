@@ -165,12 +165,7 @@ const About = () => {
         <Grid container columns={2} relaxed="very">
           <Grid.Column>
             <iframe
-              width="100%"
-              height="350"
-              frameborder="0"
-              scrolling="no"
-              marginheight="0"
-              marginwidth="0"
+              style={{ marginWidth: 0, marginHeight: 0, border: 0, width: `100%`, height: `350px` }}
               title="maps"
               src="https://maps.google.nl/maps?f=q&amp;source=s_q&amp;hl=nl&amp;geocode=&amp;q=Keizersgracht+75,+Jordaan,+Amsterdam&amp;sll=52.377934,4.88177&amp;sspn=0.01137,0.018625&amp;ie=UTF8&amp;hq=&amp;hnear=Keizersgracht+75,+1015+CE+Centrum,+Amsterdam,+Noord-Holland&amp;t=m&amp;ll=52.380839,4.883509&amp;spn=0.009169,0.020428&amp;z=15&amp;iwloc=A&amp;output=embed"
             ></iframe>
