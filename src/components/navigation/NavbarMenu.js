@@ -86,7 +86,7 @@ const NavbarMenu = ({ isVisible, setIsVisible }) => {
 const style = {
   navbar: {
     marginBottom: 0,
-    height: `120px`,
+    height: `100px`,
     border: `none`,
   },
   menuButton: {
