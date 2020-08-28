@@ -47,25 +47,25 @@ const Project = ({ projects, isLoading }) => {
       )}
 
       <Grid container centered>
-        <Grid.Row style={style.row}>
+        <Grid.Row className="row">
           <ProjectHeader oneProject={oneProject} />
         </Grid.Row>
       </Grid>
 
       <Container fluid>
-        <Grid.Row style={style.row}>
+        <Grid.Row className="row">
           <ProjectHeroImage oneProject={oneProject} />
         </Grid.Row>
       </Container>
 
       <Grid container centered>
-        <Grid.Row style={style.row}>
+        <Grid.Row className="row">
           <ProjectFluidContent oneProject={oneProject} />
         </Grid.Row>
       </Grid>
   
       <Grid container centered>
-        <Grid.Row style={style.row}>
+        <Grid.Row className="row">
           {oneProject.map((project, i) => (
               project.videos.map((url, index) => (
                 <ProjectVideo key={index} url={url} />
@@ -80,10 +80,6 @@ const Project = ({ projects, isLoading }) => {
 export default Project;
 
 const style = {
-  row: {
-    marginTop: `2.5em`,
-    // justifyContent: `center`,
-  },
   btn: {
     marginLeft: 0,
     position: `absolute`,

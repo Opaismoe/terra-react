@@ -17,7 +17,7 @@ const Home = ({ isVisible, isLoading, setIsVisible, projects}) => {
         <Grid.Row style={style.rowLeft}>
           <Grid.Column computer={4} tablet={4} mobile={16}>
             <Header>
-              <h3 className="subheading2">{process.env.NODE_ENV}</h3>
+              <h3 className="subheading2">Identiteit</h3>
             </Header>
             <p>
               Een goede indentiteit zorgt voor een sterke band met je klant of

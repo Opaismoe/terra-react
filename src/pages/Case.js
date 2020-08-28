@@ -38,19 +38,19 @@ const Case = ({ projects, isLoading }) => {
       )}
 
       <Grid container centered>
-        <Grid.Row style={style.row}>
+        <Grid.Row className="row">
           <ProjectHeader oneProject={kaseProjects} />
         </Grid.Row>
       </Grid>
 
       <Container fluid>
-        <Grid.Row style={style.row}>
+        <Grid.Row className="row">
           {/* <ProjectHeroImage oneProject={oneProject} /> */}
         </Grid.Row>
       </Container>
 
       <Grid container centered>
-        <Grid.Row style={style.row}>
+        <Grid.Row className="row">
           {/* <ProjectFluidContent oneProject={oneProject} /> */}
         </Grid.Row>
       </Grid>
@@ -61,10 +61,6 @@ const Case = ({ projects, isLoading }) => {
 export default Case;
 
 const style = {
-  row: {
-    marginTop: `2.5em`,
-    // justifyContent: `center`,
-  },
   btn: {
     marginLeft: 0,
     position: `absolute`,

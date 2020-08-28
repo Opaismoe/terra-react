@@ -10,7 +10,7 @@ const Cases = ({ projects, isLoading }) => {
   return (
     <>
       <Grid container centered>
-        <Grid.Row style={style.row}>
+        <Grid.Row className="row justify__center">
           {isLoading && (
             <PlaceholderProjectCard count={4} sm={12} md={8} lg={8} />
           )}

@@ -32,10 +32,6 @@ h1, h2, h3, h4, h5 {
   font-family: 'gotham-light', serif !important; 
 }
 
-body {
-  /* background: #f0f3f6; */
-}
-
 .menu a{
   font-family: Calibri, "Lucida Sans Unicode", sans-serif;
   
@@ -53,4 +49,12 @@ body {
 
 .video__container .ui.embed {
   margin-top: -7vw;
+}
+
+.row {
+  margin: 2.5em 0;
+}
+
+.fluid__content strong {
+  color: var(--primary);
 }
