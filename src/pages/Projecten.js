@@ -13,8 +13,9 @@ const Projecten = ({ projects, isLoading }) => {
   const [checkboxes, setCheckboxes] = useState(["Alle"]);
   const [filtered, setFiltered] = useState([]);
 
+  // TODO: improve this please..
   const filterProjects = (event, { value }) => {
-    if (checkboxes === "Alle" || value === "Alle") {
+    if (value === "Alle") {
       setFiltered(projects);
     } else {
       let filteredProjects = projects
