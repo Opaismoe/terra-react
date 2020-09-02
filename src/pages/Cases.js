@@ -4,7 +4,7 @@ import { Grid } from "semantic-ui-react";
 import { PlaceholderProjectCard, CaseCard } from "../components/index";
 
 const Cases = ({ projects, isLoading }) => {
-  let kasusen = projects.map((project) => project.case);
+  // let kasusen = projects.map((project) => project.case);
   let scrambledProjects = projects.sort(function (a, b) {return Math.random() - 0.5;});
 
   return (
@@ -36,10 +36,3 @@ const Cases = ({ projects, isLoading }) => {
 };
 
 export default Cases;
-
-const style = {
-  row: {
-    marginTop: `2.5em`,
-    justifyContent: `center`,
-  },
-};

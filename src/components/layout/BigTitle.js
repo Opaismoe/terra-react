@@ -5,7 +5,7 @@ import './BigTitle.css'
 
 const BigTitle = ({ title }) => {
   return (
-      <Grid textAlign="center">
+      <Grid container textAlign="center">
         <Grid.Row style={style.row}>
           <Grid.Column largeScreen="7" mobile="16">
             <Header className="bigtitle" as="h2">

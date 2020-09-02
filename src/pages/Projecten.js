@@ -88,10 +88,3 @@ const Projecten = ({ projects, isLoading }) => {
 };
 
 export default Projecten;
-
-const style = {
-  row: {
-    marginTop: `2.5em`,
-    justifyContent: `center`,
-  },
-};

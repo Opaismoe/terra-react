@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Button, Image } from "semantic-ui-react";
+import { Grid, Button } from "semantic-ui-react";
 
 const ProjectFilters = ({ checkboxes, filterProjects}) => {
   return (
