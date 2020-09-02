@@ -25,8 +25,6 @@ const About = () => {
           <Card
             raised
             className="card"
-            as="a"
-            href="mailto:wiebe@terralemon.nl"
           >
             <Image
               src="//terralemon.nl/img/people/_square/manon_new2.jpg"
@@ -41,8 +39,6 @@ const About = () => {
           <Card
             raised
             className="card"
-            as="a"
-            href="mailto:wiebe@terralemon.nl"
           >
             <Image
               src="//terralemon.nl/img/people/_square/dewi-de-bue-2.jpg"
@@ -57,8 +53,6 @@ const About = () => {
           <Card
             raised
             className="card"
-            as="a"
-            href="mailto:wiebe@terralemon.nl"
           >
             <Image
               src="//terralemon.nl/img/people/_square/lidy1.jpg"
@@ -76,8 +70,6 @@ const About = () => {
           <Card
             raised
             className="card"
-            as="a"
-            href="mailto:wiebe@terralemon.nl"
           >
             <Image
               src="//terralemon.nl/img/people/_square/benjamin-kuijper-1.jpg"
@@ -92,8 +84,6 @@ const About = () => {
           <Card
             raised
             className="card"
-            as="a"
-            href="mailto:wiebe@terralemon.nl"
           >
             <Image
               src="//terralemon.nl/img/people/_square/harold_kuiper2.jpg"
@@ -111,8 +101,6 @@ const About = () => {
           <Card
             raised
             className="card"
-            as="a"
-            href="mailto:wiebe@terralemon.nl"
           >
             <Image
               src="//terralemon.nl/img/people/_square/remco_new2.jpg"
@@ -128,8 +116,6 @@ const About = () => {
           <Card
             raised
             className="card"
-            as="a"
-            href="mailto:wiebe@terralemon.nl"
           >
             <Image
               src="//terralemon.nl/img/people/_square/ayrton_nw2.jpg"
@@ -145,8 +131,6 @@ const About = () => {
           <Card
             raised
             className="card"
-            as="a"
-            href="mailto:wiebe@terralemon.nl"
           >
             <Image
               src="//terralemon.nl/img/people/_square/wiebe_buursink3.jpg"
@@ -155,7 +139,7 @@ const About = () => {
             />
             <Card.Content className="profile__content">
               <Card.Header>Wiebe Buursink</Card.Header>
-              <Card.Meta>Fullstack developer</Card.Meta>
+              <Card.Meta>Frontend developer</Card.Meta>
             </Card.Content>
           </Card>
         </Card.Group>
