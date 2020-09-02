@@ -11,7 +11,8 @@ const ProjectCard = ({ project, sm, md, lg }) => {
       <Link to={`/project/${project.url_title}`}>
         <Card fluid raised className="project__card">
           <Image
-            src={project.image}
+            src={`https://terralemon.nl/img/projects/${project.image.split('/')[5]}`}
+            centered
             fluid
             className="project__card__image"
           />

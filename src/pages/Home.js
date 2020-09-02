@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Header, Transition } from "semantic-ui-react";
+import { Grid, Header } from "semantic-ui-react";
 import { VideoHero, BigTitle, MainCarousel, Rings, ProjectCard } from "../components/"
 
 const Home = ({ isLoading, projects}) => {
@@ -54,20 +54,18 @@ const Home = ({ isLoading, projects}) => {
         title="Laatste projecten"
       />
 
-      <Transition visible={!isLoading} animation='fade' duration={4500}>
-        <Grid>
-          <Grid.Row style={style.row}>
-            {projects.map((project, index) => {
-              if (index < 4) {
-                return (
-                  <ProjectCard key={project.id} project={project} sm={12} md={8} lg={4}/>
-                );
-              } 
-              return null
-            })}
-          </Grid.Row>
-        </Grid>
-      </Transition>
+      <Grid container>
+        <Grid.Row style={style.row}>
+          {projects.map((project, index) => {
+            if (index < 4) {
+              return (
+                <ProjectCard key={project.id} project={project} sm={12} md={8} lg={4}/>
+              );
+            } 
+            return null
+          })}
+        </Grid.Row>
+      </Grid>
     </>
   );
 };
