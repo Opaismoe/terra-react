@@ -41,6 +41,7 @@ const Project = ({ projects, isLoading }) => {
         title="Terug"
         icon="long arrow alternate left"
         clickHandler={() => history.goBack()}
+        style={style.btn}
       />
 
       {isLoading && (
