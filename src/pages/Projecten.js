@@ -12,6 +12,8 @@ import "./Projecten.css";
 const Projecten = ({ projects, isLoading }) => {
   const [checkboxes, setCheckboxes] = useState([]);
   const [filtered, setFiltered] = useState([]);
+  const filters = [ "Motion", "Identiteit", "Online" ]
+  
 
   // TODO: improve this please..
   const filterProjects = (event, { value }) => {
@@ -35,7 +37,7 @@ const Projecten = ({ projects, isLoading }) => {
 
   return (
     <>
-      <ProjectFilters checkboxes={checkboxes} filterProjects={filterProjects} />
+      <ProjectFilters checkboxes={checkboxes} filterProjects={filterProjects} filters={filters} />
 
       <Grid container centered>
         <Grid.Row className="row">

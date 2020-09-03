@@ -1,13 +1,11 @@
 import React from "react";
 import { Grid, Button } from "semantic-ui-react";
 
-const ProjectFilters = ({ checkboxes, filterProjects}) => {
-  const filters = [ "Motion", "Identiteit", "Online" ]
-  
+const ProjectFilters = ({ checkboxes, filterProjects, filters}) => {
   return (
     <Grid container centered>
       <Grid.Row className="row">
-        <Button.Group widths="4">
+        <Button.Group widths={filters.length+1}>
           <Button
             toggle
             active={!checkboxes}
