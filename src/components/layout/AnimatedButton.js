@@ -1,9 +1,12 @@
 import React from 'react'
 import { Button, Icon } from 'semantic-ui-react'
 
-const AnimatedButton = ({title, icon, clickHandler}) => (
+import './AnimatedButton.css'
+
+
+const AnimatedButton = ({title, icon, clickHandler, basic}) => (
   <div>
-    <Button animated primary onClick={clickHandler}>
+    <Button animated basic={basic} onClick={clickHandler} className="btn-animated">
       <Button.Content visible>{title}</Button.Content>
       <Button.Content hidden>
         <Icon name={icon} />

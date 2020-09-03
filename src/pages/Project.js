@@ -37,6 +37,7 @@ const Project = ({ projects, isLoading }) => {
     <>
       <ScrollToTop/>
       <AnimatedButton
+        basic={true}
         title="Terug"
         icon="long arrow alternate left"
         clickHandler={() => history.goBack()}

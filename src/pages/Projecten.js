@@ -10,32 +10,34 @@ import {
 import "./Projecten.css";
 
 const Projecten = ({ projects, isLoading }) => {
-  const [checkboxes, setCheckboxes] = useState(["Alle"]);
+  const [checkboxes, setCheckboxes] = useState([]);
   const [filtered, setFiltered] = useState([]);
+  const filters = [ "Motion", "Identiteit", "Online" ]
+  
 
   // TODO: improve this please..
   const filterProjects = (event, { value }) => {
-    if (value === "Alle") {
-      setFiltered(projects);
-    } else {
+    if (value) {
       let filteredProjects = projects
         .filter((project) => project.categories.includes(value))
         .map((filtered) => {
           return filtered;
         });
-      setFiltered(filteredProjects);
-    }
+        setFiltered(filteredProjects);
+      } else {
+        setFiltered(projects);
+      }
     setCheckboxes(value);
   };
 
   useEffect(() => {
     setFiltered(projects);
-    setCheckboxes("Alle");
+    setCheckboxes();
   }, [projects]);
 
   return (
     <>
-      <ProjectFilters checkboxes={checkboxes} filterProjects={filterProjects} />
+      <ProjectFilters checkboxes={checkboxes} filterProjects={filterProjects} filters={filters} />
 
       <Grid container centered>
         <Grid.Row className="row">
