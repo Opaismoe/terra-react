@@ -40,7 +40,7 @@
   <p align="center">
     Terralemon is a Amsterdam based digital design agency
     <br />
-    <a href="https://github.com/opaismoe/ee-react"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/opaismoe/ee-react"><strong>Demo »</strong></a>
     <br />
     <br />
     <a href="https://github.com/opaismoe/ee-react">View Demo</a>
@@ -140,7 +140,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Wiebe - [@twitter_handle](https://twitter.com/@Buursinki) - opaismoe@gmail.com
+Opaismoe - [@Buursinki](https://twitter.com/@Buursinki) - opaismoe@gmail.com
 
 Project Link: [https://github.com/opaismoe/ee-react](https://github.com/opaismoe/ee-react)
 
