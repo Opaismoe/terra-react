@@ -156,5 +156,5 @@ Project Link: [https://github.com/opaismoe/ee-react](https://github.com/opaismoe
 [issues-shield]: https://img.shields.io/github/issues/opaismoe/ee-react.svg?style=flat-square
 [issues-url]: https://github.com/opaismoe/ee-react/issues
 [license-shield]: https://img.shields.io/github/license/opaismoe/ee-react.svg?style=flat-square
-[license-url]: https://github.com/opaismoe/ee-react/blob/master/LICENSE.txt
+[license-url]: https://github.com/opaismoe/ee-react/blob/master/LICENSE
 [product-screenshot]: images/screenshot.png
