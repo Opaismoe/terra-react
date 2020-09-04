@@ -3,6 +3,7 @@ import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
 
 import BigTitle from './components/layout/BigTitle';
+import ProjectFilters from './components/project/ProjectFilters';
 
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
@@ -44,4 +45,11 @@ it("BigTitle renders the correct text", () => {
   });
   expect(container.textContent).toBe("hello world");
 });
+
+// it("BProjectFilters component", () => {
+//   act(() => {
+//     render(<ProjectFilters filters={["filter-1","filter-2","filter-3"]}/>, container);
+//   });
+//   expect(container.textContent).toBe("hello world");
+// });
 

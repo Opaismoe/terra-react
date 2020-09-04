@@ -10,7 +10,6 @@ const ProjectFilters = ({ checkboxes, filterProjects, filters}) => {
             toggle
             active={!checkboxes}
             onClick={filterProjects}
-            // value="Alle"
             animated="vertical"
             >
             <Button.Content visible>Alle projecten</Button.Content>
