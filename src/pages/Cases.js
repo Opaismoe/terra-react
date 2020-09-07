@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Grid } from "semantic-ui-react";
 
 import { PlaceholderProjectCard, CaseCard } from "../components/index";
@@ -9,6 +10,9 @@ const Cases = ({ projects, isLoading }) => {
 
   return (
     <>
+      <Helmet>
+        <title>Terralemon | Cases</title>
+      </Helmet>
       <Grid container centered>
         <Grid.Row className="row justify__center">
           {isLoading && (

@@ -8,7 +8,7 @@ const ProjectHeroImage = ({ project }) => {
         content.image ? (
           <Container fluid>
             <Grid.Row className="row">
-              <Image key={content.id} src={content.image} fluid />
+              <Image key={content.id} src={`https://terralemon.nl/img/projects/${content.image.split('/')[5]}`} fluid />
             </Grid.Row>
           </Container>
         ) : null

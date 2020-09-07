@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Grid, Container } from "semantic-ui-react";
+import { Container } from "semantic-ui-react";
 import { useParams, useHistory } from "react-router-dom";
 
 import {
@@ -17,9 +17,13 @@ const Case = ({ projects, isLoading }) => {
 
   useEffect(() => {
   const getProject = async () => {
-    let kaseProjects = projects.filter((project) => project.case.url_title === url_title )
-    .map((filteredProjects) => filteredProjects)
-    setKaseProjects(kaseProjects)
+    try {
+      let kaseProjects = projects.filter((project) => project.case.url_title === url_title )
+      .map((filteredProjects) => filteredProjects)
+      setKaseProjects(kaseProjects)
+    } catch (error) {
+      console.error(`error ${error}`)
+    }
   };
   getProject()
 }, [projects, url_title]);
@@ -28,9 +32,9 @@ const Case = ({ projects, isLoading }) => {
     <>
       <AnimatedButton
         title="Terug"
+        basic
         icon="long arrow alternate left"
         clickHandler={() => history.goBack()}
-        style={style.btn}
       />
 
       {isLoading && (
@@ -39,23 +43,9 @@ const Case = ({ projects, isLoading }) => {
         </Container>
       )}
 
-      <Grid container centered>
-        <Grid.Row className="row">
-          <ProjectHeader oneProject={kaseProjects} />
-        </Grid.Row>
-      </Grid>
-
-      <Container fluid>
-        <Grid.Row className="row">
-          <ProjectHeroImage oneProject={kaseProjects} />
-        </Grid.Row>
-      </Container>
-
-      <Grid container centered>
-        <Grid.Row className="row">
-          <ProjectFluidContent oneProject={kaseProjects} />
-        </Grid.Row>
-      </Grid>
+      <ProjectHeader project={kaseProjects} />
+      <ProjectHeroImage project={kaseProjects} />
+      <ProjectFluidContent project={kaseProjects} />
     </>
   );
 };

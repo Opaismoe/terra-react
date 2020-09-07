@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { Grid, Container } from "semantic-ui-react";
 import { useParams, useHistory } from "react-router-dom";
 
@@ -20,14 +21,15 @@ const Project = ({ projects, isLoading }) => {
   const { url_title } = useParams();
   const history = useHistory();
   const [project, setProject] = useState([]);
-
+  const title = project.map(project => project.title)
+  
   useEffect(() => {
     const getProject = async () => {
       let project = projects
-        .filter((project) => project.url_title === url_title)
-        .map((filteredProject) => {
-          return filteredProject;
-        });
+      .filter((project) => project.url_title === url_title)
+      .map((filteredProject) => {
+        return filteredProject;
+      });
       setProject(project);
     };
     getProject();
@@ -35,7 +37,14 @@ const Project = ({ projects, isLoading }) => {
 
   return (
     <>
+      <Helmet>
+        <title>
+          Terralemon | Project | {`${title}`}
+        </title>
+      </Helmet>
+
       <ScrollToTop/>
+      
       <AnimatedButton
         basic={true}
         title="Terug"

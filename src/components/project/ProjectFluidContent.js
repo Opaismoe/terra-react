@@ -29,7 +29,7 @@ const ProjectFluidContent = ({ project }) => {
           ) : content.image_project ? (
             <img
               key={i}
-              src={content.image_project}
+              src={`https://terralemon.nl/img/projects/${content.image.split('/')[5]}`}
               alt={content.image_project}
             ></img>
           ) : content.subtitle ? (
