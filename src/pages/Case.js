@@ -51,11 +51,3 @@ const Case = ({ projects, isLoading }) => {
 };
 
 export default Case;
-
-const style = {
-  btn: {
-    marginLeft: 0,
-    position: `absolute`,
-    left: 0,
-  },
-};
