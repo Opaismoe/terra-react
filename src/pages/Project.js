@@ -19,18 +19,18 @@ import "../components/awesome-slider-custom.css";
 const Project = ({ projects, isLoading }) => {
   const { url_title } = useParams();
   const history = useHistory();
-  const [oneProject, setOneProject] = useState([]);
+  const [project, setProject] = useState([]);
 
   useEffect(() => {
-    const getOneProject = async () => {
-      let oneProject = projects
+    const getProject = async () => {
+      let project = projects
         .filter((project) => project.url_title === url_title)
         .map((filteredProject) => {
           return filteredProject;
         });
-      setOneProject(oneProject);
+      setProject(project);
     };
-    getOneProject();
+    getProject();
   }, [projects, url_title]);
 
   return (
@@ -50,31 +50,14 @@ const Project = ({ projects, isLoading }) => {
         </Container>
       )}
 
-        <Grid container centered>
-          <Grid.Row className="row">
-            <ProjectHeader oneProject={oneProject} />
-          </Grid.Row>
-        </Grid>
+      <ProjectHeader project={project} />
+      <ProjectHeroImage project={project} />
+      <ProjectFluidContent project={project} />
 
-      {oneProject.map((project) => (
-        project.image ?
-          <Container fluid>
-            <Grid.Row className="row">
-              <ProjectHeroImage project={project} />
-            </Grid.Row>
-          </Container>
-          : null
-      ))}
-
-      <Grid container centered>
-        <Grid.Row className="row">
-          <ProjectFluidContent oneProject={oneProject} />
-        </Grid.Row>
-      </Grid>
   
       <Grid container centered>
         <Grid.Row className="row">
-          {oneProject.map((project, i) => (
+          {project.map((project, i) => (
               project.videos.map((url, index) => (
                 <ProjectVideo key={index} url={url} />
               ))
