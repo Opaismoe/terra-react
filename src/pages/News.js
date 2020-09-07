@@ -7,9 +7,9 @@ import he from "he";
 import "./News.module.css";
 
 let NEWS_URL = "/news.json";
-if (process.env.NODE_ENV === "development") {
-  NEWS_URL = `https://terralemon-dev.nl/json/news`;
-}
+// if (process.env.NODE_ENV === "development") {
+//   NEWS_URL = `https://terralemon-dev.nl/json/news`;
+// }
 
 const News = () => {
   const [news, setNews] = useState([]);
@@ -37,34 +37,31 @@ const News = () => {
         <title>Terralemon | Nieuws</title>
       </Helmet>
       <Grid container centered>
-        <Grid.Row className="row">
-          {news.map((item, i) => (
+        {news && news.map((item, i) => (
+        <Grid.Row key={item.id}>
             <HeroHeader
-              key={i}
+              key={item.id+1}
               title={item.title}
               date={item.formated_entry_date}
             />
-          ))}
-          <Grid.Column width={16}>
-            {isLoading ? <PlaceholderHeader /> : null}
-            {news.map((item, i) => (
-              <>
-                <Image
+          <Grid.Column width={16} key={item.id+2}>
+            {isLoading && <PlaceholderHeader />}
+            <Image
                   as="a"
-                  href={`project/${item.project.url_title}`}
+                  href={item.project && `project/${item.project.url_title}`}
+                  // TODO: niet de index als key gebruiken!
                   key={i + 10}
-                  src={item.project.image_project}
+                  src={item.project && item.project.image_project}
                   fluid
                 />
                 <div
                   key={i}
-                  dangerouslySetInnerHTML={createMarkup(item.content_field)}
+                  dangerouslySetInnerHTML={item.text && createMarkup(item.text)}
                   className="content__block"
                 ></div>
-              </>
-            ))}
           </Grid.Column>
         </Grid.Row>
+        ))}
       </Grid>
     </>
   );

@@ -15,3 +15,9 @@ p {
   position: absolute;
   left: 0;
 }
+
+ul {
+  list-style: decimal;
+  list-style-position: inside;
+  text-align: center;
+}
