@@ -8,7 +8,7 @@ const CaseCard = ({ project, sm, md, lg }) => {
       <Link to={`/case/${project.case.url_title}`}>
         <Card fluid raised className="kasus__card" style={{ marginBottom: `2.5em` }}>
         <Image
-            src={`https://terralemon.nl/img/projects/${project.image.split('/')[5]}`}
+            src={project.image ? project.image : 'https://via.placeholder.com/600x400?text=Image+not+found+in+CMS'}
             fluid
             className="project__card__image"
           />

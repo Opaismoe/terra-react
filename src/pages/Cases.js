@@ -10,13 +10,14 @@ const Cases = ({ projects, isLoading = true }) => {
       <Helmet>
         <title>Terralemon | Cases</title>
       </Helmet>
+      
       <Grid container centered>
         <Grid.Row className="row justify__center">
           {isLoading && (
             <PlaceholderProjectCard count={16} sm={12} md={8} lg={8} />
           )}
           {projects.map((project, index) => (
-            <CaseCard
+          <CaseCard
               key={index}
               project={project}
               sm={12}
@@ -26,6 +27,8 @@ const Cases = ({ projects, isLoading = true }) => {
           ))}
         </Grid.Row>
       </Grid>
+
+      
     </>
   );
 };
