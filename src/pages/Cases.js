@@ -4,7 +4,7 @@ import { Grid } from "semantic-ui-react";
 
 import { PlaceholderProjectCard, CaseCard } from "../components/index";
 
-const Cases = ({ projects, isLoading }) => {
+const Cases = ({ projects, isLoading = true }) => {
   return (
     <>
       <Helmet>
@@ -13,13 +13,7 @@ const Cases = ({ projects, isLoading }) => {
       <Grid container centered>
         <Grid.Row className="row justify__center">
           {isLoading && (
-            <PlaceholderProjectCard count={4} sm={12} md={8} lg={8} />
-          )}
-          {isLoading && (
-            <PlaceholderProjectCard count={1} sm={12} md={8} lg={16} />
-          )}
-          {isLoading && (
-            <PlaceholderProjectCard count={16} sm={12} md={8} lg={4} />
+            <PlaceholderProjectCard count={16} sm={12} md={8} lg={8} />
           )}
           {projects.map((project, index) => (
             <CaseCard
