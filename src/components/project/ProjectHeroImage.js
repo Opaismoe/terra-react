@@ -1,12 +1,18 @@
 import React from "react";
-import { Image, } from "semantic-ui-react";
+import { Image, Container, Grid } from "semantic-ui-react";
 
-const ProjectHeroImage = ({ oneProject }) => {
+const ProjectHeroImage = ({ project }) => {
   return (
     <>
-      {oneProject.map((project) => (
-        <Image key={project.id} src={`https://terralemon.nl/img/projects/${project.image.split('/')[5]}`} fluid />
-      ))}
+      {project.map((content) =>
+        content.image ? (
+          <Container fluid>
+            <Grid.Row className="row">
+              <Image key={content.id} src={`https://terralemon.nl/img/projects/${content.image.split('/')[5]}`} fluid />
+            </Grid.Row>
+          </Container>
+        ) : null
+      )}
     </>
   );
 };

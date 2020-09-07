@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { Grid } from "semantic-ui-react";
 
 import {
@@ -12,10 +13,8 @@ import "./Projecten.css";
 const Projecten = ({ projects, isLoading }) => {
   const [checkboxes, setCheckboxes] = useState([]);
   const [filtered, setFiltered] = useState([]);
-  const filters = [ "Motion", "Identiteit", "Online" ]
-  
+  const filters = ["Motion", "Identiteit", "Online"];
 
-  // TODO: improve this please..
   const filterProjects = (event, { value }) => {
     if (value) {
       let filteredProjects = projects
@@ -23,10 +22,10 @@ const Projecten = ({ projects, isLoading }) => {
         .map((filtered) => {
           return filtered;
         });
-        setFiltered(filteredProjects);
-      } else {
-        setFiltered(projects);
-      }
+      setFiltered(filteredProjects);
+    } else {
+      setFiltered(projects);
+    }
     setCheckboxes(value);
   };
 
@@ -37,7 +36,15 @@ const Projecten = ({ projects, isLoading }) => {
 
   return (
     <>
-      <ProjectFilters checkboxes={checkboxes} filterProjects={filterProjects} filters={filters} />
+      <Helmet>
+        <title>Terralemon | Projecten</title>
+      </Helmet>
+
+      <ProjectFilters
+        checkboxes={checkboxes}
+        filterProjects={filterProjects}
+        filters={filters}
+      />
 
       <Grid container centered>
         <Grid.Row className="row">

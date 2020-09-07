@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { Grid, Container } from "semantic-ui-react";
 import { useParams, useHistory } from "react-router-dom";
 
@@ -19,23 +20,31 @@ import "../components/awesome-slider-custom.css";
 const Project = ({ projects, isLoading }) => {
   const { url_title } = useParams();
   const history = useHistory();
-  const [oneProject, setOneProject] = useState([]);
-
+  const [project, setProject] = useState([]);
+  const title = project.map(project => project.title)
+  
   useEffect(() => {
-    const getOneProject = async () => {
-      let oneProject = projects
-        .filter((project) => project.url_title === url_title)
-        .map((filteredProject) => {
-          return filteredProject;
-        });
-      setOneProject(oneProject);
+    const getProject = async () => {
+      let project = projects
+      .filter((project) => project.url_title === url_title)
+      .map((filteredProject) => {
+        return filteredProject;
+      });
+      setProject(project);
     };
-    getOneProject();
+    getProject();
   }, [projects, url_title]);
 
   return (
     <>
+      <Helmet>
+        <title>
+          Terralemon | Project | {`${title}`}
+        </title>
+      </Helmet>
+
       <ScrollToTop/>
+      
       <AnimatedButton
         basic={true}
         title="Terug"
@@ -50,27 +59,14 @@ const Project = ({ projects, isLoading }) => {
         </Container>
       )}
 
-      <Grid container centered>
-        <Grid.Row className="row">
-          <ProjectHeader oneProject={oneProject} />
-        </Grid.Row>
-      </Grid>
+      <ProjectHeader project={project} />
+      <ProjectHeroImage project={project} />
+      <ProjectFluidContent project={project} />
 
-      <Container fluid>
-        <Grid.Row className="row">
-          <ProjectHeroImage oneProject={oneProject} />
-        </Grid.Row>
-      </Container>
-
-      <Grid container centered>
-        <Grid.Row className="row">
-          <ProjectFluidContent oneProject={oneProject} />
-        </Grid.Row>
-      </Grid>
   
       <Grid container centered>
         <Grid.Row className="row">
-          {oneProject.map((project, i) => (
+          {project.map((project, i) => (
               project.videos.map((url, index) => (
                 <ProjectVideo key={index} url={url} />
               ))

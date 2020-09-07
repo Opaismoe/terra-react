@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { Progress } from "semantic-ui-react";
@@ -9,7 +10,7 @@ import "./App.css";
 
 let PROJECT_URL = "/projects.json";
 // if (process.env.NODE_ENV === "development") {
-  // PROJECT_URL = `https://terralemon-dev.nl/json/projects`;
+// PROJECT_URL = `https://terralemon-dev.nl/json/projects`;
 // }
 const PROJECT_CACHE = {};
 
@@ -41,6 +42,12 @@ function App() {
 
   return (
     <div className="App">
+      <Helmet>
+        <title>Terralemon | Identiteit, motion, online</title>
+        <meta name="description" content="Terralemon is een digitaal ontwerpbureau. Wij geloven dat goede ideeën en intelligent design merken en organisaties versterken. Ervaren en gepassioneerd. Effectief en elegant. No-nonsense en grensverleggend." />
+        <meta name="theme-color" content="#00b1dd" />
+      </Helmet>
+
       <BrowserRouter>
         {isLoading ? (
           <Progress
@@ -61,7 +68,11 @@ function App() {
             <Home isLoading={isLoading} projects={projects} />
           </Route>
           <Route path="/projecten">
-            <Projecten projects={projects} isLoading={isLoading} setProjects={setProjects} />
+            <Projecten
+              projects={projects}
+              isLoading={isLoading}
+              setProjects={setProjects}
+            />
           </Route>
           <Route path="/project/:url_title">
             <Project projects={projects} isLoading={isLoading} />
