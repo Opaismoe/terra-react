@@ -9,7 +9,7 @@ const ProjectHeader = ({ oneProject }) => {
           <h1 className="bigtitle lead" style={{ marginBottom: 0 }}>
             {he.decode(project.title)}
           </h1>
-          <p className="lead">{he.decode(project.summary)}</p>
+          {project.text && <p className="lead">{he.decode(project.text)}</p>}
           <small>
             {project.categories &&
               project.categories.map((category, index) =>

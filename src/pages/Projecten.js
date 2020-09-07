@@ -14,8 +14,6 @@ const Projecten = ({ projects, isLoading }) => {
   const [filtered, setFiltered] = useState([]);
   const filters = [ "Motion", "Identiteit", "Online" ]
   
-
-  // TODO: improve this please..
   const filterProjects = (event, { value }) => {
     if (value) {
       let filteredProjects = projects

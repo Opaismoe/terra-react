@@ -50,17 +50,21 @@ const Project = ({ projects, isLoading }) => {
         </Container>
       )}
 
-      <Grid container centered>
-        <Grid.Row className="row">
-          <ProjectHeader oneProject={oneProject} />
-        </Grid.Row>
-      </Grid>
+        <Grid container centered>
+          <Grid.Row className="row">
+            <ProjectHeader oneProject={oneProject} />
+          </Grid.Row>
+        </Grid>
 
-      <Container fluid>
-        <Grid.Row className="row">
-          <ProjectHeroImage oneProject={oneProject} />
-        </Grid.Row>
-      </Container>
+      {oneProject.map((project) => (
+        project.image ?
+          <Container fluid>
+            <Grid.Row className="row">
+              <ProjectHeroImage project={project} />
+            </Grid.Row>
+          </Container>
+          : null
+      ))}
 
       <Grid container centered>
         <Grid.Row className="row">

@@ -38,7 +38,7 @@ const ProjectFluidContent = ({ oneProject }) => {
         ) : content.image_gallery ? (
           <AwesomeSlider key={i} bullets={false}>
             {content.image_gallery.map((src) => (
-              <img key={i} data-src={`https://terralemon.nl/img/projects_gallery/${src.split('/')[5]}`} alt={`https://terralemon.nl/img/projects/${src.split('/')[5]}`} />
+              <img key={i} data-src={src} alt={src} />
             ))}
           </AwesomeSlider>
         ) : content.video_gallery ? (
