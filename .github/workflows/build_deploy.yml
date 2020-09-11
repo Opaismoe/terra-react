@@ -14,7 +14,7 @@ jobs:
       with:
         node-version: '12.x'
         
-    - name: Build Project
+    - name: Build & Test Project
       run: |
         yarn install
         yarn run test
