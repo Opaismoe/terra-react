@@ -28,7 +28,7 @@ const About = () => {
         <Card.Group itemsPerRow={3}>
           <Card raised className="card">
             <Image
-              src="https://terralemon.nl/img/people/_square/manon_new2.jpg"
+              src="//terralemon.nl/img/people/_square/manon_new2.jpg"
               fluid
               className="card__image"
             />
@@ -39,7 +39,7 @@ const About = () => {
           </Card>
           <Card raised className="card">
             <Image
-              src="https://terralemon.nl/img/people/_square/dewi-de-bue-2.jpg"
+              src="//terralemon.nl/img/people/_square/dewi-de-bue-2.jpg"
               fluid
               className="card__image"
             />
@@ -50,7 +50,7 @@ const About = () => {
           </Card>
           <Card raised className="card">
             <Image
-              src="https://terralemon.nl/img/people/_square/lidy1.jpg"
+              src="//terralemon.nl/img/people/_square/lidy1.jpg"
               fluid
               className="card__image"
             />
@@ -64,7 +64,7 @@ const About = () => {
         <Card.Group itemsPerRow={2}>
           <Card raised className="card">
             <Image
-              src="https://terralemon.nl/img/people/_square/benjamin-kuijper-1.jpg"
+              src="//terralemon.nl/img/people/_square/benjamin-kuijper-1.jpg"
               fluid
               className="card__image"
             />
@@ -75,7 +75,7 @@ const About = () => {
           </Card>
           <Card raised className="card">
             <Image
-              src="https://terralemon.nl/img/people/_square/harold_kuiper2.jpg"
+              src="//terralemon.nl/img/people/_square/harold_kuiper2.jpg"
               fluid
               className="card__image"
             />
@@ -89,7 +89,7 @@ const About = () => {
         <Card.Group itemsPerRow={3}>
           <Card raised className="card">
             <Image
-              src="https://terralemon.nl/img/people/_square/remco_new2.jpg"
+              src="//terralemon.nl/img/people/_square/remco_new2.jpg"
               fluid
               className="card__image"
             />
@@ -101,7 +101,7 @@ const About = () => {
 
           <Card raised className="card">
             <Image
-              src="https://terralemon.nl/img/people/_square/ayrton_nw2.jpg"
+              src="//terralemon.nl/img/people/_square/ayrton_nw2.jpg"
               fluid
               className="card__image"
             />
@@ -113,7 +113,7 @@ const About = () => {
 
           <Card raised className="card">
             <Image
-              src="https://terralemon.nl/img/people/_square/wiebe_buursink3.jpg"
+              src="//terralemon.nl/img/people/_square/wiebe_buursink3.jpg"
               fluid
               className="card__image"
             />
@@ -137,7 +137,7 @@ const About = () => {
                 height: `350px`,
               }}
               title="maps"
-              src="https:https://maps.google.nl/maps?f=q&amp;source=s_q&amp;hl=nl&amp;geocode=&amp;q=Keizersgracht+75,+Jordaan,+Amsterdam&amp;sll=52.377934,4.88177&amp;sspn=0.01137,0.018625&amp;ie=UTF8&amp;hq=&amp;hnear=Keizersgracht+75,+1015+CE+Centrum,+Amsterdam,+Noord-Holland&amp;t=m&amp;ll=52.380839,4.883509&amp;spn=0.009169,0.020428&amp;z=15&amp;iwloc=A&amp;output=embed"
+              src="https://maps.google.nl/maps?f=q&amp;source=s_q&amp;hl=nl&amp;geocode=&amp;q=Keizersgracht+75,+Jordaan,+Amsterdam&amp;sll=52.377934,4.88177&amp;sspn=0.01137,0.018625&amp;ie=UTF8&amp;hq=&amp;hnear=Keizersgracht+75,+1015+CE+Centrum,+Amsterdam,+Noord-Holland&amp;t=m&amp;ll=52.380839,4.883509&amp;spn=0.009169,0.020428&amp;z=15&amp;iwloc=A&amp;output=embed"
             ></iframe>
           </Grid.Column>
           <Grid.Column as={Item}>
