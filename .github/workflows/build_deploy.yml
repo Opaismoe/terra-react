@@ -1,5 +1,5 @@
 on: push
-name: Build and Publish Front End Framework Website
+name: Test & Build and Publish Front End Framework Website
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
@@ -17,6 +17,7 @@ jobs:
     - name: Build Project
       run: |
         yarn install
+        yarn run test
         yarn run build --if-present
         
     - name: List output files
