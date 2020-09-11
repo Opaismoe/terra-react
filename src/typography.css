@@ -12,6 +12,34 @@
       --vspace-2: calc(1.5 * var(--space) * 1rem);
       --vspace-3: calc(0.5 * var(--space) * 1rem);
   }
+
+
+@font-face {
+    font-family: 'gotham-bold';
+    font-style: normal;
+    font-weight: bold;
+    src: url('/fonts/gotham-bold-webfont.woff2'); 
+  }
+  @font-face {
+    font-family: 'gotham-light';
+    font-style: normal;
+    font-weight: light;
+    src: url('/fonts/gotham-light-webfont.woff2'); 
+  }
+  @font-face {
+    font-family: 'gotham-book';
+    font-style: normal;
+    font-weight: bold;
+    src: url('/fonts/gotham-book-webfont.woff2'); 
+  }
+  
+  body, a, p, small, h1, h2, h3, h4, h5, span {
+    font-family: 'gotham-light';
+  }
+  
+  h1, h2, h3, h4, h5 {
+    font-family: 'gotham-light', serif !important; 
+  }
   
   html {font-size: 16px;}
   

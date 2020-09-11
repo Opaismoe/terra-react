@@ -1,0 +1,9 @@
+.video__container {
+  height: 35vw;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.video__container .ui.embed {
+  margin-top: -13vw;
+}

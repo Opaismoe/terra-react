@@ -5,32 +5,7 @@
 .bg-primary { background: var(--primary) !important; color: white !important; }
 
 @import './typography.css';
-@font-face {
-  font-family: 'gotham-bold';
-  font-style: normal;
-  font-weight: bold;
-  src: url('/fonts/gotham-bold-webfont.woff2'); 
-}
-@font-face {
-  font-family: 'gotham-light';
-  font-style: normal;
-  font-weight: light;
-  src: url('/fonts/gotham-light-webfont.woff2'); 
-}
-@font-face {
-  font-family: 'gotham-book';
-  font-style: normal;
-  font-weight: bold;
-  src: url('/fonts/gotham-book-webfont.woff2'); 
-}
 
-body, a, p, small, h1, h2, h3, h4, h5, span {
-  font-family: 'gotham-light';
-}
-
-h1, h2, h3, h4, h5 {
-  font-family: 'gotham-light', serif !important; 
-}
 
 html {
   scroll-behavior: smooth;
@@ -38,22 +13,11 @@ html {
 
 .menu a{
   font-family: Calibri, "Lucida Sans Unicode", sans-serif;
-  
 }
 
 * {
   margin: 0;
   padding: 0;
-}
-
-.video__container {
-  height: 35vw;
-  max-height: 600px;
-  overflow: hidden;
-}
-
-.video__container .ui.embed {
-  margin-top: -13vw;
 }
 
 .row {
