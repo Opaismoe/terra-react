@@ -31,7 +31,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/opaismoe/ee-react">
+  <a href="https://github.com/opaismoe/terra-react">
     <img src="https://terralemon.nl/img/general/terralemon.svg" alt="Logo" width="480" height="80">
   </a>
 
@@ -40,14 +40,14 @@
   <p align="center">
     Terralemon is a Amsterdam based digital design agency
     <br />
-    <a href="https://github.com/opaismoe/ee-react"><strong>Demo »</strong></a>
+    <a href="https://github.com/opaismoe/terra-react"><strong>Demo »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/opaismoe/ee-react">View Demo</a>
+    <a href="https://github.com/opaismoe/terra-react">View Demo</a>
     ·
-    <a href="https://github.com/opaismoe/ee-react/issues">Bugs</a>
+    <a href="https://github.com/opaismoe/terra-react/issues">Bugs</a>
     ·
-    <a href="https://github.com/opaismoe/ee-react/issues">Request Feature</a>
+    <a href="https://github.com/opaismoe/terra-react/issues">Request Feature</a>
   </p>
 </p>
 
@@ -96,7 +96,7 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the ee-react
 ```sh
-git clone https://github.com/opaismoe/ee-react.git
+git clone https://github.com/opaismoe/terra-react.git
 ```
 2. Install NPM packages
 ```sh
@@ -130,7 +130,7 @@ yarn eject
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/opaismoe/ee-react/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/opaismoe/terra-react/issues) for a list of proposed features (and known issues).
 
 <!-- LICENSE -->
 ## License
@@ -142,19 +142,19 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Opaismoe - [@Buursinki](https://twitter.com/@Buursinki) - opaismoe@gmail.com
 
-Project Link: [https://github.com/opaismoe/ee-react](https://github.com/opaismoe/ee-react)
+Project Link: [https://github.com/opaismoe/terra-react](https://github.com/opaismoe/terra-react)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/opaismoe/ee-react.svg?style=flat-square
-[contributors-url]: https://github.com/opaismoe/ee-react/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/opaismoe/ee-react.svg?style=flat-square
-[forks-url]: https://github.com/opaismoe/ee-react/network/members
-[stars-shield]: https://img.shields.io/github/stars/opaismoe/ee-react.svg?style=flat-square
-[stars-url]: https://github.com/opaismoe/ee-react/stargazers
-[issues-shield]: https://img.shields.io/github/issues/opaismoe/ee-react.svg?style=flat-square
-[issues-url]: https://github.com/opaismoe/ee-react/issues
-[license-shield]: https://img.shields.io/github/license/opaismoe/ee-react.svg?style=flat-square
-[license-url]: https://github.com/opaismoe/ee-react/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/opaismoe/terra-react.svg?style=flat-square
+[contributors-url]: https://github.com/opaismoe/terra-react/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/opaismoe/terra-react.svg?style=flat-square
+[forks-url]: https://github.com/opaismoe/terra-react/network/members
+[stars-shield]: https://img.shields.io/github/stars/opaismoe/terra-react.svg?style=flat-square
+[stars-url]: https://github.com/opaismoe/terra-react/stargazers
+[issues-shield]: https://img.shields.io/github/issues/opaismoe/terra-react.svg?style=flat-square
+[issues-url]: https://github.com/opaismoe/terra-react/issues
+[license-shield]: https://img.shields.io/github/license/opaismoe/terra-react.svg?style=flat-square
+[license-url]: https://github.com/opaismoe/terra-react/blob/master/LICENSE
 [product-screenshot]: images/screenshot.png
