@@ -7,7 +7,7 @@ const Home = ({ projects}) => {
   return (
     <>
       <VideoHero />
-      <BigTitle title="Wij zijn een digital design agency." />
+      <BigTitle title="Wij zijn de digital design agency." />
       <MainCarousel />
       <BigTitle
         title="Wij geloven dat krachtige ideeën en intelligent design merken en
