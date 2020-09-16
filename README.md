@@ -3,7 +3,7 @@
 *** make this better, please fork the ee-react and create a pull request or simply open
 *** an issue with the tag "enhancement".
 *** Thanks again! Now go create something AMAZING! :D
-*** test
+*** 
 ***
 ***
 *** To avoid retyping too much info. Do a search and replace for the following:
